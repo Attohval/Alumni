@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alumni — Connecting Generations</title>
+  <meta name="description" content="Modern, professional informational alumni website template." />
+
+  <!-- Tailwind CDN (Play) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Optional: Tailwind config for extended fonts/colors -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            alum: '#0b3d91',
+            accent: '#f59e0b'
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Icons (Heroicons) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* small cosmetic helpers */
+    .glass { background: rgba(255,255,255,0.6); backdrop-filter: blur(6px); }
+    .nav-link { transition: color .18s, transform .18s; }
+    .nav-link:hover { transform: translateY(-2px); }
+  </style>
+</head>
+<body class="antialiased text-gray-800 bg-gray-50 font-sans">
+  <!-- NAVBAR -->
+  <header class="fixed inset-x-0 top-0 z-40">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <a href="#home" class="flex items-center gap-3 text-alum font-semibold text-lg">
+          <!-- Logo mark -->
+          <svg class="w-9 h-9" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <rect width="24" height="24" rx="6" fill="#0b3d91"/>
+            <path d="M7 16L10.5 9L14 16" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Alumni</span>
+        </a>
+      </div>
+
+      <div class="hidden md:flex items-center gap-8">
+        <a class="nav-link text-sm font-medium hover:text-alum" href="#about">About</a>
+        <a class="nav-link text-sm font-medium hover:text-alum" href="#events">Events</a>
+        <a class="nav-link text-sm font-medium hover:text-alum" href="#news">News</a>
+        <a class="nav-link text-sm font-medium hover:text-alum" href="#gallery">Gallery</a>
+        <a class="nav-link text-sm font-medium hover:text-alum" href="#contact">Contact</a>
+      </div>
+
+      <!-- Desktop CTA + Mobile Menu Button -->
+      <div class="flex items-center gap-3">
+        <a href="#events" class="hidden md:inline-block bg-alum text-white px-4 py-2 rounded-md text-sm font-medium shadow">Upcoming Events</a>
+
+        <button id="menuBtn" class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-alum/40" aria-label="Open menu">
+          <!-- Hamburger -->
+          <svg id="hamburger" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <!-- Close icon (hidden) -->
+          <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile slide-in menu -->
+    <div id="mobileMenu" class="fixed inset-0 z-50 hidden">
+      <div id="menuOverlay" class="absolute inset-0 bg-black/30"></div>
+      <aside class="absolute right-0 top-0 h-full w-80 bg-white shadow-2xl p-6 transform transition-transform translate-x-0 md:hidden">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="6" fill="#0b3d91"/></svg>
+            <span class="text-lg font-semibold">Alumni</span>
+          </div>
+          <button id="mobileClose" class="p-2 rounded focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+          </button>
+        </div>
+
+        <nav class="mt-8 flex flex-col gap-4">
+          <a href="#about" class="text-base font-medium">About</a>
+          <a href="#events" class="text-base font-medium">Events</a>
+          <a href="#news" class="text-base font-medium">News</a>
+          <a href="#gallery" class="text-base font-medium">Gallery</a>
+          <a href="#contact" class="text-base font-medium">Contact</a>
+        </nav>
+
+        <div class="mt-auto">
+          <p class="text-sm text-gray-500">Stay connected — join us at events and through our updates.</p>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main class="pt-28">
+    <section id="home" class="bg-gradient-to-r from-white via-slate-50 to-white">
+      <div class="max-w-7xl mx-auto px-6 py-16 lg:py-28 grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-alum/10 text-alum w-max">Alumni Network</p>
+          <h1 class="mt-6 text-4xl sm:text-5xl font-extrabold leading-tight">Connecting generations of leaders and changemakers</h1>
+          <p class="mt-4 text-gray-600 max-w-xl">A modern hub where alumni stay informed about events, news, and opportunities — crafted to celebrate achievements and make reconnection effortless.</p>
+
+          <div class="mt-8 flex gap-3 items-center">
+            <a href="#events" class="inline-flex items-center gap-2 bg-alum text-white px-5 py-3 rounded-lg shadow-md font-medium">See Events</a>
+            <a href="#contact" class="inline-flex items-center gap-2 border border-alum text-alum px-5 py-3 rounded-lg font-medium">Get in Touch</a>
+          </div>
+
+          <div class="mt-8 grid grid-cols-3 gap-3 sm:max-w-sm">
+            <div class="text-center">
+              <p class="text-2xl font-bold">120+</p>
+              <p class="text-xs text-gray-500">Events hosted</p>
+            </div>
+            <div class="text-center">
+              <p class="text-2xl font-bold">4K+</p>
+              <p class="text-xs text-gray-500">Alumni members</p>
+            </div>
+            <div class="text-center">
+              <p class="text-2xl font-bold">30+</p>
+              <p class="text-xs text-gray-500">Years of impact</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Graduation" class="w-full h-96 object-cover">
+          </div>
+          <div class="absolute -bottom-6 left-6 bg-white p-4 rounded-2xl shadow-lg glass w-64">
+            <p class="text-sm text-gray-600">Next event</p>
+            <p class="font-semibold">Alumni Reunion 2025 — Oct 12</p>
+            <p class="text-xs text-gray-500 mt-2">Register interest via the contact section.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="max-w-7xl mx-auto px-6 py-16">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl font-bold">About the Alumni Association</h2>
+          <p class="mt-4 text-gray-600">We are a community of former students committed to giving back, networking, and supporting one another. Our mission is to foster lifelong relationships, create opportunities for mentorship, and preserve the legacy of our alma mater.</p>
+
+          <ul class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <li class="flex gap-3 items-start">
+              <svg class="w-6 h-6 text-alum mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/></svg>
+              <div>
+                <p class="font-medium">Mentorship</p>
+                <p class="text-sm text-gray-500">Structured support for students and recent grads.</p>
+              </div>
+            </li>
+            <li class="flex gap-3 items-start">
+              <svg class="w-6 h-6 text-alum mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h4l3 8 4-16 3 8h4"/></svg>
+              <div>
+                <p class="font-medium">Events</p>
+                <p class="text-sm text-gray-500">Conferences, reunions, and local meetups.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <div class="p-6 bg-white rounded-2xl shadow">
+            <h3 class="font-semibold">Our History</h3>
+            <p class="text-sm text-gray-500 mt-2">Established in 1992, our association has grown into a vibrant organization connecting alumni across the world.</p>
+          </div>
+
+          <div class="p-6 bg-white rounded-2xl shadow">
+            <h3 class="font-semibold">Get Involved</h3>
+            <p class="text-sm text-gray-500 mt-2">Volunteer at events, mentor students, or share job opportunities through our news page.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EVENTS -->
+    <section id="events" class="bg-white border-t py-16">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex items-center justify-between">
+          <h2 class="text-2xl font-bold">Upcoming Events</h2>
+          <a href="#contact" class="text-sm font-medium text-alum">Contact to host an event →</a>
+        </div>
+
+        <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Event card -->
+          <article class="p-6 bg-slate-50 rounded-2xl shadow hover:shadow-lg transition">
+            <time class="text-sm text-gray-500">Oct 12, 2025</time>
+            <h3 class="mt-2 font-semibold">Alumni Reunion 2025</h3>
+            <p class="mt-2 text-sm text-gray-600">A day of celebration, networking, and keynote talks by notable alumni.</p>
+            <div class="mt-4 flex items-center gap-3">
+              <span class="text-xs px-2 py-1 rounded-full bg-alum/10 text-alum">Reunion</span>
+              <span class="text-xs px-2 py-1 rounded-full bg-green-100 text-green-700">Tickets: Free</span>
+            </div>
+          </article>
+
+          <article class="p-6 bg-slate-50 rounded-2xl shadow hover:shadow-lg transition">
+            <time class="text-sm text-gray-500">Nov 7, 2025</time>
+            <h3 class="mt-2 font-semibold">Careers & Mentorship Night</h3>
+            <p class="mt-2 text-sm text-gray-600">Panels and one-on-one mentorship for early-career alumni and students.</p>
+            <div class="mt-4 flex items-center gap-3">
+              <span class="text-xs px-2 py-1 rounded-full bg-alum/10 text-alum">Career</span>
+            </div>
+          </article>
+
+          <article class="p-6 bg-slate-50 rounded-2xl shadow hover:shadow-lg transition">
+            <time class="text-sm text-gray-500">Dec 3, 2025</time>
+            <h3 class="mt-2 font-semibold">Holiday Networking Mixer</h3>
+            <p class="mt-2 text-sm text-gray-600">An informal evening for alumni to reconnect before the holidays.</p>
+            <div class="mt-4 flex items-center gap-3">
+              <span class="text-xs px-2 py-1 rounded-full bg-alum/10 text-alum">Social</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWS -->
+    <section id="news" class="max-w-7xl mx-auto px-6 py-16">
+      <div>
+        <h2 class="text-2xl font-bold">Latest News</h2>
+        <p class="text-sm text-gray-500 mt-2">Announcements, spotlights, and features about our alumni community.</p>
+
+        <div class="mt-8 grid sm:grid-cols-2 gap-6">
+          <article class="p-6 bg-white rounded-2xl shadow hover:shadow-lg transition">
+            <h3 class="font-semibold">Alumni Spotlight: Dr. Ada Ono</h3>
+            <p class="mt-2 text-sm text-gray-600">Recognized for groundbreaking work in public health.</p>
+            <a class="inline-block mt-4 text-sm text-alum font-medium" href="#">Read more →</a>
+          </article>
+
+          <article class="p-6 bg-white rounded-2xl shadow hover:shadow-lg transition">
+            <h3 class="font-semibold">New Mentorship Program Launch</h3>
+            <p class="mt-2 text-sm text-gray-600">Launching a structured 6-month mentorship pilot for final-year students.</p>
+            <a class="inline-block mt-4 text-sm text-alum font-medium" href="#">Read more →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="bg-slate-50 py-16">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex items-center justify-between">
+          <h2 class="text-2xl font-bold">Gallery</h2>
+          <a class="text-sm text-alum" href="#">View all photos</a>
+        </div>
+
+        <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+          <!-- image tiles (use real images or placeholders) -->
+          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery1">
+          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery2">
+          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1526779259212-5f1d3b0b6c10?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery3">
+          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery4">
+          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1531973968078-9bb02785f13d?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery5">
+          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1519985176271-adb1088fa94c?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery6">
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="max-w-7xl mx-auto px-6 py-16">
+      <div class="grid lg:grid-cols-2 gap-12">
+        <div>
+          <h2 class="text-2xl font-bold">Contact</h2>
+          <p class="mt-2 text-sm text-gray-500">Questions, event proposals, or press — reach out and we'll respond within a few working days.</p>
+
+          <div class="mt-6 space-y-4">
+            <div class="flex items-start gap-4">
+              <svg class="w-6 h-6 text-alum mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <div>
+                <div class="font-medium">Email</div>
+                <div class="text-sm text-gray-500">alumni@university.edu</div>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <svg class="w-6 h-6 text-alum mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m0 4v10"/></svg>
+              <div>
+                <div class="font-medium">Office</div>
+                <div class="text-sm text-gray-500">123 Campus Drive, City, Country</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Map placeholder -->
+          <div class="mt-6">
+            <div class="w-full h-48 bg-gray-100 rounded-lg flex items-center justify-center text-sm text-gray-400">Map placeholder — replace with embed</div>
+          </div>
+        </div>
+
+        <div>
+          <form class="space-y-4 bg-white p-6 rounded-2xl shadow">
+            <div>
+              <label class="block text-sm font-medium">Name</label>
+              <input class="mt-1 block w-full rounded-md border-gray-200 shadow-sm" placeholder="Your full name">
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium">Email</label>
+              <input type="email" class="mt-1 block w-full rounded-md border-gray-200 shadow-sm" placeholder="you@email.com">
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium">Message</label>
+              <textarea class="mt-1 block w-full rounded-md border-gray-200 shadow-sm" rows="4" placeholder="Tell us about your inquiry"></textarea>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <p class="text-xs text-gray-500">We respect your privacy — no spam.</p>
+              <button type="submit" class="bg-alum text-white px-4 py-2 rounded-md">Send message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t mt-12">
+      <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="text-sm text-gray-600">© <span id="year"></span> Alumni Association. All rights reserved.</div>
+        <div class="flex items-center gap-4">
+          <a href="#" class="text-sm text-gray-500 hover:text-alum">Privacy</a>
+          <a href="#" class="text-sm text-gray-500 hover:text-alum">Terms</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="backToTop" class="fixed right-6 bottom-6 p-3 rounded-full shadow-lg bg-white hidden" aria-label="Back to top">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-alum" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3.707 10.707a1 1 0 01-1.414-1.414l6-6a1 1 0 011.414 0l6 6a1 1 0 11-1.414 1.414L10 5.414 3.707 10.707z" clip-rule="evenodd"/></svg>
+    </button>
+  </main>
+
+  <!-- Scripts -->
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu behavior
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileClose = document.getElementById('mobileClose');
+    const menuOverlay = document.getElementById('menuOverlay');
+    const hamburger = document.getElementById('hamburger');
+    const closeIcon = document.getElementById('closeIcon');
+
+    function openMenu() {
+      mobileMenu.classList.remove('hidden');
+      document.querySelector('aside').style.transform = 'translateX(0)';
+      hamburger.classList.add('hidden');
+      closeIcon.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      document.querySelector('aside').style.transform = 'translateX(110%)';
+      setTimeout(()=> mobileMenu.classList.add('hidden'), 240);
+      hamburger.classList.remove('hidden');
+      closeIcon.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    menuBtn.addEventListener('click', ()=>{
+      if (mobileMenu.classList.contains('hidden')) openMenu(); else closeMenu();
+    });
+    mobileClose.addEventListener('click', closeMenu);
+    menuOverlay.addEventListener('click', closeMenu);
+
+    // Close mobile menu when clicking any link inside it
+    document.querySelectorAll('#mobileMenu a').forEach(a=> a.addEventListener('click', closeMenu));
+
+    // Back to top button
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', ()=>{
+      if (window.scrollY > 300) backToTop.classList.remove('hidden'); else backToTop.classList.add('hidden');
+    });
+    backToTop.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
+
+    // Smooth scrolling for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(link=>{
+      link.addEventListener('click', function(e){
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          const y = target.getBoundingClientRect().top + window.scrollY - 80;
+          window.scrollTo({top: y, behavior: 'smooth'});
+        }
+      });
+    });
+  </script>
+</body>
+</html>
