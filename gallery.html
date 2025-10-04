@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alumni - Connecting Generations</title>
+  <meta name="description" content="Modern, professional informational alumni website template." />
+
+  <!-- Tailwind CDN (Play) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Optional: Tailwind config for extended fonts/colors -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            alum: '#0b3d91',
+            accent: '#f59e0b'
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Icons (Heroicons) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* small cosmetic helpers */
+    .glass { background: rgba(255,255,255,0.6); backdrop-filter: blur(6px); }
+    .nav-link { transition: color .18s, transform .18s; }
+    .nav-link:hover { transform: translateY(-2px); }
+  </style>
+</head>
+<body class="antialiased text-gray-800 bg-gray-50 font-sans">
+  <!-- NAVBAR -->
+  <header class="fixed bg-white inset-x-0 top-0 z-40">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <a href="#home" class="flex items-center gap-3 text-alum font-semibold text-lg">
+          <!-- Logo mark -->
+          <svg class="w-9 h-9" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <rect width="24" height="24" rx="6" fill="#0b3d91"/>
+            <path d="M7 16L10.5 9L14 16" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Vtech Alumni</span>
+        </a>
+      </div>
+
+      <div class="hidden md:flex items-center gap-8">
+        <a class="nav-link text-sm font-medium hover:text-alum" href="#about">About</a>
+        <a class="nav-link text-sm font-medium hover:text-alum" href="#events">Events</a>
+        <a class="nav-link text-sm font-medium hover:text-alum" href="#news">News</a>
+        <a class="nav-link text-sm font-medium hover:text-alum" href="#gallery">Gallery</a>
+        <a class="nav-link text-sm font-medium hover:text-alum" href="#contact">Contact</a>
+      </div>
+
+      <!-- Desktop CTA + Mobile Menu Button -->
+      <div class="flex items-center gap-3">
+        <a href="#events" class="hidden md:inline-block bg-alum hover:bg-alum/80 transition duration-700 ease-in-out text-white px-4 py-2 rounded-md text-sm font-medium shadow">Upcoming Events</a>
+
+        <button id="menuBtn" class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-alum/40" aria-label="Open menu">
+          <!-- Hamburger -->
+          <svg id="hamburger" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <!-- Close icon (hidden) -->
+          <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden " fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile slide-in menu -->
+    <div id="mobileMenu" class="fixed inset-0 z-50 hidden">
+      <div id="menuOverlay" class="absolute inset-0 bg-black/30"></div>
+      <aside class="absolute right-0 top-0 h-full w-3/5 bg-white shadow-2xl p-6 transform transition-transform translate-x-0 md:hidden">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="6" fill="#0b3d91"/></svg>
+            <span class="text-lg font-semibold">Alumni</span>
+          </div>
+          <button id="mobileClose" class="p-2 rounded focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+          </button>
+        </div>
+
+        <nav class="mt-8 flex flex-col gap-4">
+          <a href="#about" class="text-base font-medium">About</a>
+          <a href="#events" class="text-base font-medium">Events</a>
+          <a href="#news" class="text-base font-medium">News</a>
+          <a href="#gallery" class="text-base font-medium">Gallery</a>
+          <a href="#contact" class="text-base font-medium">Contact</a>
+        </nav>
+
+        <div class="mt-auto">
+          <p class="text-sm text-gray-500">Stay connected — join us at events and through our updates.</p>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="bg-slate-50 py-16">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex items-center justify-between">
+          <h2 class="text-2xl font-bold">Gallery</h2>
+          <a class="text-sm text-alum" href="#">View all photos</a>
+        </div>
+
+        <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+          <!-- image tiles (use real images or placeholders) -->
+          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery1">
+          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery2">
+          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1519985176271-adb1088fa94c?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery3">
+          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery4">
+          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1531973968078-9bb02785f13d?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery5">
+          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1519985176271-adb1088fa94c?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery6">
+        </div>
+      </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t mt-12">
+      <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="text-sm text-gray-600">© <span id="year"></span> Alumni Association. All rights reserved.</div>
+        <div class="flex items-center gap-4">
+          <a href="#" class="text-sm text-gray-500 hover:text-alum">Privacy</a>
+          <a href="#" class="text-sm text-gray-500 hover:text-alum">Terms</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="backToTop" class="fixed right-6 bottom-6 p-3 rounded-full shadow-lg bg-white hidden" aria-label="Back to top">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-alum" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3.707 10.707a1 1 0 01-1.414-1.414l6-6a1 1 0 011.414 0l6 6a1 1 0 11-1.414 1.414L10 5.414 3.707 10.707z" clip-rule="evenodd"/></svg>
+    </button>
+  </main>
+
+  <!-- Scripts -->
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu behavior
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileClose = document.getElementById('mobileClose');
+    const menuOverlay = document.getElementById('menuOverlay');
+    const hamburger = document.getElementById('hamburger');
+    const closeIcon = document.getElementById('closeIcon');
+
+    function openMenu() {
+      mobileMenu.classList.remove('hidden');
+      document.querySelector('aside').style.transform = 'translateX(0)';
+      hamburger.classList.add('hidden');
+      closeIcon.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      document.querySelector('aside').style.transform = 'translateX(110%)';
+      setTimeout(()=> mobileMenu.classList.add('hidden'), 240);
+      hamburger.classList.remove('hidden');
+      closeIcon.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    menuBtn.addEventListener('click', ()=>{
+      if (mobileMenu.classList.contains('hidden')) openMenu(); else closeMenu();
+    });
+    mobileClose.addEventListener('click', closeMenu);
+    menuOverlay.addEventListener('click', closeMenu);
+
+    // Close mobile menu when clicking any link inside it
+    document.querySelectorAll('#mobileMenu a').forEach(a=> a.addEventListener('click', closeMenu));
+
+    // Back to top button
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', ()=>{
+      if (window.scrollY > 300) backToTop.classList.remove('hidden'); else backToTop.classList.add('hidden');
+    });
+    backToTop.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
+
+    // Smooth scrolling for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(link=>{
+      link.addEventListener('click', function(e){
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          const y = target.getBoundingClientRect().top + window.scrollY - 80;
+          window.scrollTo({top: y, behavior: 'smooth'});
+        }
+      });
+    });
+  </script>
+</body>
+</html>
