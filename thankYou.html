@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alumni — Connecting Generations</title>
+  <meta name="description" content="Modern, professional informational alumni website template." />
+
+  <!-- Tailwind CDN (Play) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Optional: Tailwind config for extended fonts/colors -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            alum: '#020353',
+            accent: '#f59e0b'
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Icons (Heroicons) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* small cosmetic helpers */
+    .glass { background: rgba(255,255,255,0.6); backdrop-filter: blur(6px); }
+    .nav-link { transition: color .18s, transform .18s; }
+    .nav-link:hover { transform: translateY(-2px); }
+  </style>
+</head>
+<body class="antialiased text-gray-800 bg-gray-50 font-sans">
+  <!-- NAVBAR -->
+  <header class="fixed bg-white inset-x-0 top-0 z-40">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="flex items-center gap-3 text-alum font-semibold text-lg">
+          <!-- Logo mark -->
+            <img class="w-9 h-12" src="images/logo.jpg" alt="Logo">
+            <span>Vtech Alumni</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <main class="pt-16">
+    <section id="home" class="bg-gradient-to-r from-white via-slate-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-alum mb-6">Thank You for Reaching Out!</h1>
+            <p class="text-lg sm:text-xl text-gray-600 mb-8">We appreciate your interest in connecting with us. Our team will get back to you shortly.</p>
+            <a href="index.html" class="inline-block bg-alum hover:bg-alum/80 transition duration-700 ease-in-out text-white px-6 py-3 rounded-md text-lg font-medium shadow">Return to Home</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t mt-12">
+      <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="text-sm text-gray-600">© <span id="year"></span> Alumni Association. All rights reserved.</div>
+        <div class="flex items-center gap-4">
+          <a href="#" class="text-sm text-gray-500 hover:text-alum">Privacy</a>
+          <a href="#" class="text-sm text-gray-500 hover:text-alum">Terms</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Scripts -->
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+  </script>
+</body>
+</html>
