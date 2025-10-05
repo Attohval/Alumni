@@ -14,7 +14,7 @@
       theme: {
         extend: {
           colors: {
-            alum: '#0b3d91',
+            alum: '#020353',
             accent: '#f59e0b'
           },
           fontFamily: {
@@ -49,6 +49,7 @@
       </div>
 
   <div class="hidden lg:flex items-center gap-8">
+        <a class="nav-link text-sm font-medium hover:text-alum" href="index.html">Home</a>
         <a class="nav-link text-sm font-medium hover:text-alum" href="#about">About</a>
         <a class="nav-link text-sm font-medium hover:text-alum" href="#events">Events</a>
         <a class="nav-link text-sm font-medium hover:text-alum" href="#news">News</a>
@@ -79,7 +80,7 @@
   <aside class="absolute right-0 top-0 h-full w-3/5 bg-white shadow-2xl p-6 transform transition-transform translate-x-0 lg:hidden">
         <div class="flex items-center justify-between">
           <div class="flex items-center gap-3">
-            <img class="w-16 h-18" src="images/logo.jpg" alt="Logo">
+            <img class="w-6 h-18" src="images/logo.jpg" alt="Logo">
             <!-- <span class="text-lg font-semibold">Alumni</span> -->
           </div>
           <button id="mobileClose" class="p-2 rounded focus:outline-none">
@@ -88,6 +89,7 @@
         </div>
 
         <nav class="mt-8 flex flex-col gap-4">
+          <a href="index.html" class="text-base font-medium">Home</a>
           <a href="#about" class="text-base font-medium">About</a>
           <a href="#events" class="text-base font-medium">Events</a>
           <a href="#news" class="text-base font-medium">News</a>
@@ -105,22 +107,68 @@
   <!-- HERO -->
   <main class="pt-16">
 
-    <!-- GALLERY -->
-    <section id="gallery" class="bg-slate-50 py-16">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="flex items-center justify-between">
-          <h2 class="text-2xl font-bold">Gallery</h2>
-          <a class="text-sm text-alum" href="gallery.html">View all photos</a>
+    <!-- Contact Header -->
+    <section class="bg-gradient-to-b from-alum to-alum/80 text-white">
+      <div class="max-w-7xl mx-auto px-6 py-20 text-center">
+        <h1 class="text-4xl sm:text-5xl font-extrabold">Get in Touch with Us</h1>
+        <p class="mt-4 text-lg sm:text-xl max-w-2xl mx-auto">We'd love to hear from you! Whether you have questions, event proposals, or press inquiries, feel free to reach out and we'll respond within a few working days.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="max-w-7xl mx-auto px-6 py-16">
+      <div class="grid lg:grid-cols-2 gap-12">
+        <div>
+          <!-- <h2 class="text-2xl font-bold">Contact</h2>
+          <p class="mt-2 text-sm text-gray-500">Questions, event proposals, or press — reach out and we'll respond within a few working days.</p> -->
+
+          <div class="mt-6 space-y-4">
+            <div class="flex items-start gap-4">
+              <svg class="w-6 h-6 text-alum mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <div>
+                <div class="font-medium"><strong>Email:</strong></div>
+                <div class="text-sm text-gray-500">alumni@gmail.com</div>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <svg class="w-6 h-6 text-alum mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m0 4v10"/></svg>
+              <div>
+                <div class="font-medium"><strong>School:</strong></div>
+                <div class="text-sm text-gray-500">123 Campus Drive, City, Country</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Map placeholder -->
+          <div class="mt-6">
+            <div class="w-full h-48 bg-gray-100 rounded-lg flex items-center justify-center text-sm text-gray-400">Map placeholder — replace with embed</div>
+          </div>
         </div>
 
-        <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-          <!-- image tiles (use real images or placeholders) -->
-          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery1">
-          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery2">
-          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1519985176271-adb1088fa94c?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery3">
-          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery4">
-          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1531973968078-9bb02785f13d?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery5">
-          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1519985176271-adb1088fa94c?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery6">
+        <div>
+          <form class="space-y-4 bg-white p-6 rounded-2xl shadow">
+            <div>
+              <label class="block text-sm font-medium">Name</label>
+              <input class="mt-1 px-2 block w-full rounded-md border-gray-200 shadow-sm" placeholder="Your full name">
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium">Email</label>
+              <input type="email" class="mt-1 px-2 block w-full rounded-md border-gray-200 shadow-sm" placeholder="you@email.com">
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium">Message</label>
+              <textarea class="mt-1 py-2 px-2 block w-full rounded-md border-gray-200 shadow-sm" rows="4" placeholder="Tell us about your inquiry"></textarea>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <p class="text-xs text-gray-500">We respect your privacy — no spam.</p>
+              <button type="submit" class="bg-alum hover:bg-alum/80 transition duration-700 text-white px-4 py-2 rounded-md">Send message</button>
+            </div>
+          </form>
         </div>
       </div>
     </section>

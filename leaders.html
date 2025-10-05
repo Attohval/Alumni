@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alumni — Connecting Generations</title>
+  <meta name="description" content="Modern, professional informational alumni website template." />
+
+  <!-- Tailwind CDN (Play) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Optional: Tailwind config for extended fonts/colors -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            alum: '#0b3d91',
+            accent: '#f59e0b'
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Icons (Heroicons) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* small cosmetic helpers */
+    .glass { background: rgba(255,255,255,0.6); backdrop-filter: blur(6px); }
+    .nav-link { transition: color .18s, transform .18s; }
+    .nav-link:hover { transform: translateY(-2px); }
+  </style>
+</head>
+<body class="antialiased text-gray-800 bg-gray-50 font-sans">
+  <!-- NAVBAR -->
+  <header class="fixed bg-white inset-x-0 top-0 z-40">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="flex items-center gap-3 text-alum font-semibold text-lg">
+          <!-- Logo mark -->
+            <img class="w-9 h-12" src="images/logo.jpg" alt="Logo">
+            <span>Vtech Alumni</span>
+        </a>
+      </div>
+
+  <div class="hidden lg:flex items-center gap-8">
+        <a class="nav-link text-sm font-medium hover:text-alum" href="#about">About</a>
+        <a class="nav-link text-sm font-medium hover:text-alum" href="#events">Events</a>
+        <a class="nav-link text-sm font-medium hover:text-alum" href="#news">News</a>
+        <a class="nav-link text-sm font-medium hover:text-alum" href="#gallery">Gallery</a>
+        <a class="nav-link text-sm font-medium hover:text-alum" href="#contact">Contact</a>
+      </div>
+
+      <!-- Desktop CTA + Mobile Menu Button -->
+      <div class="flex items-center gap-3">
+  <a href="#events" class="hidden lg:inline-block bg-alum hover:bg-alum/80 transition duration-700 ease-in-out text-white px-4 py-2 rounded-md text-sm font-medium shadow">Upcoming Events</a>
+
+  <button id="menuBtn" class="lg:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-alum/40" aria-label="Open menu">
+          <!-- Hamburger -->
+          <svg id="hamburger" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <!-- Close icon (hidden) -->
+          <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden " fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile slide-in menu -->
+    <div id="mobileMenu" class="fixed inset-0 z-50 hidden">
+      <div id="menuOverlay" class="absolute inset-0 bg-black/30"></div>
+  <aside class="absolute right-0 top-0 h-full w-3/5 bg-white shadow-2xl p-6 transform transition-transform translate-x-0 lg:hidden">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <img class="w-16 h-18" src="images/logo.jpg" alt="Logo">
+            <!-- <span class="text-lg font-semibold">Alumni</span> -->
+          </div>
+          <button id="mobileClose" class="p-2 rounded focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+          </button>
+        </div>
+
+        <nav class="mt-8 flex flex-col gap-4">
+          <a href="#about" class="text-base font-medium">About</a>
+          <a href="#events" class="text-base font-medium">Events</a>
+          <a href="#news" class="text-base font-medium">News</a>
+          <a href="#gallery" class="text-base font-medium">Gallery</a>
+          <a href="#contact" class="text-base font-medium">Contact</a>
+        </nav>
+
+        <div class="mt-auto">
+          <p class="text-sm text-gray-500">Stay connected — join us at events and through our updates.</p>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto mt-24 px-6 py-16">
+    <h1 class="text-3xl font-bold mb-8">Our Leaders</h1>
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Example leader card -->
+      <div class="bg-white rounded-2xl shadow p-6 flex flex-col items-center">
+        <img src="images/Nicholas Ovuzorie.jpg" alt="President" class="w-40 h-40 rounded-full object-cover shadow-lg border-4 border-alum">
+        <h2 class="font-semibold text-lg">Mr. Nicholas Ovuzorie</h2>
+        <p class="text-sm text-gray-600 mb-2">President</p>
+        <p class="text-xs text-gray-500 text-center">Dedicated to fostering alumni connections and driving impactful initiatives for our community.</p>
+      </div>
+      <div class="bg-white rounded-2xl shadow p-6 flex flex-col items-center">
+        <img src="images/grad.jpg" alt="Leader" class="w-28 h-28 rounded-full object-cover mb-4 border-4 border-alum">
+        <h2 class="font-semibold text-lg">Dr. Samuel Attoh</h2>
+        <p class="text-sm text-gray-600 mb-2">President</p>
+        <p class="text-xs text-gray-500 text-center">Dedicated to fostering alumni connections and driving impactful initiatives for our community.</p>
+      </div>
+      <div class="bg-white rounded-2xl shadow p-6 flex flex-col items-center">
+        <img src="images/grad.jpg" alt="Leader" class="w-28 h-28 rounded-full object-cover mb-4 border-4 border-alum">
+        <h2 class="font-semibold text-lg">Dr. Samuel Attoh</h2>
+        <p class="text-sm text-gray-600 mb-2">President</p>
+        <p class="text-xs text-gray-500 text-center">Dedicated to fostering alumni connections and driving impactful initiatives for our community.</p>
+      </div>
+      <div class="bg-white rounded-2xl shadow p-6 flex flex-col items-center">
+        <img src="images/grad.jpg" alt="Leader" class="w-28 h-28 rounded-full object-cover mb-4 border-4 border-alum">
+        <h2 class="font-semibold text-lg">Dr. Samuel Attoh</h2>
+        <p class="text-sm text-gray-600 mb-2">President</p>
+        <p class="text-xs text-gray-500 text-center">Dedicated to fostering alumni connections and driving impactful initiatives for our community.</p>
+      </div>
+      <div class="bg-white rounded-2xl shadow p-6 flex flex-col items-center">
+        <img src="images/grad.jpg" alt="Leader" class="w-28 h-28 rounded-full object-cover mb-4 border-4 border-alum">
+        <h2 class="font-semibold text-lg">Dr. Samuel Attoh</h2>
+        <p class="text-sm text-gray-600 mb-2">President</p>
+        <p class="text-xs text-gray-500 text-center">Dedicated to fostering alumni connections and driving impactful initiatives for our community.</p>
+      </div>
+      <div class="bg-white rounded-2xl shadow p-6 flex flex-col items-center">
+        <img src="images/grad.jpg" alt="Leader" class="w-28 h-28 rounded-full object-cover mb-4 border-4 border-alum">
+        <h2 class="font-semibold text-lg">Dr. Samuel Attoh</h2>
+        <p class="text-sm text-gray-600 mb-2">President</p>
+        <p class="text-xs text-gray-500 text-center">Dedicated to fostering alumni connections and driving impactful initiatives for our community.</p>
+      </div>
+      <div class="bg-white rounded-2xl shadow p-6 flex flex-col items-center">
+        <img src="images/grad.jpg" alt="Leader" class="w-28 h-28 rounded-full object-cover mb-4 border-4 border-alum">
+        <h2 class="font-semibold text-lg">Dr. Samuel Attoh</h2>
+        <p class="text-sm text-gray-600 mb-2">President</p>
+        <p class="text-xs text-gray-500 text-center">Dedicated to fostering alumni connections and driving impactful initiatives for our community.</p>
+      </div>
+      <div class="bg-white rounded-2xl shadow p-6 flex flex-col items-center">
+        <img src="images/grad.jpg" alt="Leader" class="w-28 h-28 rounded-full object-cover mb-4 border-4 border-alum">
+        <h2 class="font-semibold text-lg">Dr. Samuel Attoh</h2>
+        <p class="text-sm text-gray-600 mb-2">President</p>
+        <p class="text-xs text-gray-500 text-center">Dedicated to fostering alumni connections and driving impactful initiatives for our community.</p>
+      </div>
+      <div class="bg-white rounded-2xl shadow p-6 flex flex-col items-center">
+        <img src="images/grad.jpg" alt="Leader" class="w-28 h-28 rounded-full object-cover mb-4 border-4 border-alum">
+        <h2 class="font-semibold text-lg">Dr. Samuel Attoh</h2>
+        <p class="text-sm text-gray-600 mb-2">President</p>
+        <p class="text-xs text-gray-500 text-center">Dedicated to fostering alumni connections and driving impactful initiatives for our community.</p>
+      </div>
+      <div class="bg-white rounded-2xl shadow p-6 flex flex-col items-center">
+        <img src="images/grad.jpg" alt="Leader" class="w-28 h-28 rounded-full object-cover mb-4 border-4 border-alum">
+        <h2 class="font-semibold text-lg">Dr. Samuel Attoh</h2>
+        <p class="text-sm text-gray-600 mb-2">President</p>
+        <p class="text-xs text-gray-500 text-center">Dedicated to fostering alumni connections and driving impactful initiatives for our community.</p>
+      </div>
+      <div class="bg-white rounded-2xl shadow p-6 flex flex-col items-center">
+        <img src="images/grad.jpg" alt="Leader" class="w-28 h-28 rounded-full object-cover mb-4 border-4 border-alum">
+        <h2 class="font-semibold text-lg">Dr. Samuel Attoh</h2>
+        <p class="text-sm text-gray-600 mb-2">President</p>
+        <p class="text-xs text-gray-500 text-center">Dedicated to fostering alumni connections and driving impactful initiatives for our community.</p>
+      </div>
+      <div class="bg-white rounded-2xl shadow p-6 flex flex-col items-center">
+        <img src="images/grad.jpg" alt="Leader" class="w-28 h-28 rounded-full object-cover mb-4 border-4 border-alum">
+        <h2 class="font-semibold text-lg">Dr. Samuel Attoh</h2>
+        <p class="text-sm text-gray-600 mb-2">President</p>
+        <p class="text-xs text-gray-500 text-center">Dedicated to fostering alumni connections and driving impactful initiatives for our community.</p>
+      </div>
+      <!-- Add more leader cards as needed -->
+    </div>
+
+    <!-- Featured Members Section -->
+    <section class="mt-16">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-2xl font-bold">Featured Members</h2>
+        <a href="members.html" class="text-sm font-medium text-alum">View all members →</a>
+      </div>
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="bg-white rounded-2xl shadow p-6 flex flex-col items-center">
+          <img src="images/grad.jpg" alt="Member" class="w-20 h-20 rounded-full object-cover mb-3 border-2 border-alum">
+          <h2 class="font-semibold text-base">Jane Doe</h2>
+          <p class="text-sm text-gray-600 mb-1">Class of 2015</p>
+          <p class="text-xs text-gray-500 text-center">Software Engineer, Google</p>
+        </div>
+        <div class="bg-white rounded-2xl shadow p-6 flex flex-col items-center">
+          <img src="images/grad.jpg" alt="Member" class="w-20 h-20 rounded-full object-cover mb-3 border-2 border-alum">
+          <h2 class="font-semibold text-base">John Smith</h2>
+          <p class="text-sm text-gray-600 mb-1">Class of 2012</p>
+          <p class="text-xs text-gray-500 text-center">Entrepreneur</p>
+        </div>
+        <!-- Add more featured members as needed -->
+      </div>
+    </section>
+
+    <!-- Back to top button -->
+    <button id="backToTop" class="fixed bottom-6 right-6 bg-alum text-white p-3 rounded-full shadow-lg hover:bg-alum/80 transition duration-300 hidden" aria-label="Back to top">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+      </svg>
+    </button>
+  </main>
+
+  <footer class="bg-white border-t mt-12">
+    <div class="max-w-7xl mx-auto px-6 py-8 text-sm text-gray-600">© <span id="year"></span> Alumni Association. All rights reserved.</div>
+  </footer>
+
+    <!-- Scripts -->
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu behavior
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileClose = document.getElementById('mobileClose');
+    const menuOverlay = document.getElementById('menuOverlay');
+    const hamburger = document.getElementById('hamburger');
+    const closeIcon = document.getElementById('closeIcon');
+
+    function openMenu() {
+      mobileMenu.classList.remove('hidden');
+      document.querySelector('aside').style.transform = 'translateX(0)';
+      hamburger.classList.add('hidden');
+      closeIcon.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      document.querySelector('aside').style.transform = 'translateX(110%)';
+      setTimeout(()=> mobileMenu.classList.add('hidden'), 240);
+      hamburger.classList.remove('hidden');
+      closeIcon.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    menuBtn.addEventListener('click', ()=>{
+      if (mobileMenu.classList.contains('hidden')) openMenu(); else closeMenu();
+    });
+    mobileClose.addEventListener('click', closeMenu);
+    menuOverlay.addEventListener('click', closeMenu);
+
+    // Close mobile menu when clicking any link inside it
+    document.querySelectorAll('#mobileMenu a').forEach(a=> a.addEventListener('click', closeMenu));
+
+    // Back to top button
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', ()=>{
+      if (window.scrollY > 300) backToTop.classList.remove('hidden'); else backToTop.classList.add('hidden');
+    });
+    backToTop.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
+
+    // Smooth scrolling for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(link=>{
+      link.addEventListener('click', function(e){
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          const y = target.getBoundingClientRect().top + window.scrollY - 80;
+          window.scrollTo({top: y, behavior: 'smooth'});
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

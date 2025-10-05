@@ -14,7 +14,7 @@
       theme: {
         extend: {
           colors: {
-            alum: '#0b3d91',
+            alum: '#020353',
             accent: '#f59e0b'
           },
           fontFamily: {
@@ -41,29 +41,26 @@
   <header class="fixed bg-white inset-x-0 top-0 z-40">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
       <div class="flex items-center gap-4">
-        <a href="#home" class="flex items-center gap-3 text-alum font-semibold text-lg">
+        <a href="index.html" class="flex items-center gap-3 text-alum font-semibold text-lg">
           <!-- Logo mark -->
-          <svg class="w-9 h-9" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-            <rect width="24" height="24" rx="6" fill="#0b3d91"/>
-            <path d="M7 16L10.5 9L14 16" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <span>Vtech Alumni</span>
+            <img class="w-9 h-12" src="images/logo.jpg" alt="Logo">
+            <span>Vtech Alumni</span>
         </a>
       </div>
 
-      <div class="hidden md:flex items-center gap-8">
+  <div class="hidden lg:flex items-center gap-8">
         <a class="nav-link text-sm font-medium hover:text-alum" href="#about">About</a>
         <a class="nav-link text-sm font-medium hover:text-alum" href="#events">Events</a>
         <a class="nav-link text-sm font-medium hover:text-alum" href="#news">News</a>
         <a class="nav-link text-sm font-medium hover:text-alum" href="#gallery">Gallery</a>
-        <a class="nav-link text-sm font-medium hover:text-alum" href="#contact">Contact</a>
+        <a class="nav-link text-sm font-medium hover:text-alum" href="contact.html">Contact</a>
       </div>
 
       <!-- Desktop CTA + Mobile Menu Button -->
       <div class="flex items-center gap-3">
-        <a href="#events" class="hidden md:inline-block bg-alum hover:bg-alum/80 transition duration-700 ease-in-out text-white px-4 py-2 rounded-md text-sm font-medium shadow">Upcoming Events</a>
+  <a href="#events" class="hidden lg:inline-block bg-alum hover:bg-alum/80 transition duration-700 ease-in-out text-white px-4 py-2 rounded-md text-sm font-medium shadow">Upcoming Events</a>
 
-        <button id="menuBtn" class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-alum/40" aria-label="Open menu">
+  <button id="menuBtn" class="lg:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-alum/40" aria-label="Open menu">
           <!-- Hamburger -->
           <svg id="hamburger" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -79,11 +76,11 @@
     <!-- Mobile slide-in menu -->
     <div id="mobileMenu" class="fixed inset-0 z-50 hidden">
       <div id="menuOverlay" class="absolute inset-0 bg-black/30"></div>
-      <aside class="absolute right-0 top-0 h-full w-3/5 bg-white shadow-2xl p-6 transform transition-transform translate-x-0 md:hidden">
+  <aside class="absolute right-0 top-0 h-full w-3/5 bg-white shadow-2xl p-6 transform transition-transform translate-x-0 lg:hidden">
         <div class="flex items-center justify-between">
           <div class="flex items-center gap-3">
-            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="6" fill="#0b3d91"/></svg>
-            <span class="text-lg font-semibold">Alumni</span>
+            <img class="w-16 h-18" src="images/logo.jpg" alt="Logo">
+            <!-- <span class="text-lg font-semibold">Alumni</span> -->
           </div>
           <button id="mobileClose" class="p-2 rounded focus:outline-none">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
@@ -94,8 +91,8 @@
           <a href="#about" class="text-base font-medium">About</a>
           <a href="#events" class="text-base font-medium">Events</a>
           <a href="#news" class="text-base font-medium">News</a>
-          <a href="#gallery" class="text-base font-medium">Gallery</a>
-          <a href="#contact" class="text-base font-medium">Contact</a>
+          <a href="gallery.html" class="text-base font-medium">Gallery</a>
+          <a href="contact.html" class="text-base font-medium">Contact</a>
         </nav>
 
         <div class="mt-auto">
@@ -186,6 +183,22 @@
         </div>
       </div>
     </section>
+
+      <!-- LEADER SECTION -->
+      <section id="leader" class="max-w-7xl mx-auto px-6 py-16">
+        <div class="flex flex-col md:flex-row items-center gap-10">
+          <div class="flex-shrink-0">
+            <img src="images/Nicholas Ovuzorie.jpg" alt="President" class="w-40 h-40 rounded-full object-cover shadow-lg border-4 border-alum">
+          </div>
+          <div>
+            <h2 class="text-2xl font-bold mb-2">Alumni Leader</h2>
+            <p class="text-lg font-semibold text-alum">Mr. Nicholas Ovuzorie</p>
+            <p class="text-sm text-gray-600 mb-4">President, Alumni Association</p>
+            <p class="text-gray-500 max-w-md mb-6">Dedicated to fostering alumni connections and driving impactful initiatives for our community.</p>
+            <a href="leaders.html" class="inline-block bg-alum hover:bg-alum/80 text-white px-5 py-2 rounded-md font-medium shadow transition">View all leaders</a>
+          </div>
+        </div>
+      </section>
 
     <!-- EVENTS -->
     <section id="events" class="bg-white border-t py-16">
@@ -281,15 +294,15 @@
             <div class="flex items-start gap-4">
               <svg class="w-6 h-6 text-alum mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
               <div>
-                <div class="font-medium">Email</div>
-                <div class="text-sm text-gray-500">alumni@university.edu</div>
+                <div class="font-medium"><strong>Email:</strong></div>
+                <div class="text-sm text-gray-500">alumni@gmail.com</div>
               </div>
             </div>
 
             <div class="flex items-start gap-4">
               <svg class="w-6 h-6 text-alum mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m0 4v10"/></svg>
               <div>
-                <div class="font-medium">Office</div>
+                <div class="font-medium"><strong>School:</strong></div>
                 <div class="text-sm text-gray-500">123 Campus Drive, City, Country</div>
               </div>
             </div>

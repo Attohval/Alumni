@@ -102,46 +102,69 @@
     </div>
   </header>
 
-  <!-- HERO -->
-  <main class="pt-16">
-
-    <!-- GALLERY -->
-    <section id="gallery" class="bg-slate-50 py-16">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="flex items-center justify-between">
-          <h2 class="text-2xl font-bold">Gallery</h2>
-          <a class="text-sm text-alum" href="gallery.html">View all photos</a>
+  <main class="max-w-7xl mx-auto mt-24 px-6 py-16">
+    <h1 class="text-3xl font-bold mb-8">Alumni Members</h1>
+    <div class="mb-8">
+      <input type="text" placeholder="Search members..." class="w-full max-w-md px-4 py-2 border rounded-md shadow-sm" id="searchInput">
+    </div>
+    <div id="membersGrid" class="grid md:grid-cols-4 gap-8">
+        <!-- Example member card -->
+        <div class="bg-white rounded-2xl shadow p-6 flex flex-col items-center">
+            <img src="images/grad.jpg" alt="Member" class="w-20 h-20 rounded-full object-cover mb-3 border-2 border-alum">
+            <h2 class="font-semibold text-base">Jane Doe</h2>
+            <p class="text-sm text-gray-600 mb-1">Class of 2015</p>
+            <p class="text-xs text-gray-500 text-center">Software Engineer, Google</p>
         </div>
-
-        <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-          <!-- image tiles (use real images or placeholders) -->
-          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery1">
-          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery2">
-          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1519985176271-adb1088fa94c?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery3">
-          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery4">
-          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1531973968078-9bb02785f13d?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery5">
-          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1519985176271-adb1088fa94c?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery6">
+        <div class="bg-white rounded-2xl shadow p-6 flex flex-col items-center">
+            <img src="images/grad.jpg" alt="Member" class="w-20 h-20 rounded-full object-cover mb-3 border-2 border-alum">
+            <h2 class="font-semibold text-base">John Smith</h2>
+            <p class="text-sm text-gray-600 mb-1">Class of 2012</p>
+            <p class="text-xs text-gray-500 text-center">Entrepreneur</p>
         </div>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="bg-white border-t mt-12">
-      <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div class="text-sm text-gray-600">© <span id="year"></span> Alumni Association. All rights reserved.</div>
-        <div class="flex items-center gap-4">
-          <a href="#" class="text-sm text-gray-500 hover:text-alum">Privacy</a>
-          <a href="#" class="text-sm text-gray-500 hover:text-alum">Terms</a>
+        <div class="bg-white rounded-2xl shadow p-6 flex flex-col items-center">
+            <img src="images/grad.jpg" alt="Member" class="w-20 h-20 rounded-full object-cover mb-3 border-2 border-alum">
+            <h2 class="font-semibold text-base">Jane Doe</h2>
+            <p class="text-sm text-gray-600 mb-1">Class of 2015</p>
+            <p class="text-xs text-gray-500 text-center">Software Engineer, Google</p>
         </div>
-      </div>
-    </footer>
-
-    <!-- Back to top button -->
-    <button id="backToTop" class="fixed right-6 bottom-6 p-3 rounded-full shadow-lg bg-white hidden" aria-label="Back to top">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-alum" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3.707 10.707a1 1 0 01-1.414-1.414l6-6a1 1 0 011.414 0l6 6a1 1 0 11-1.414 1.414L10 5.414 3.707 10.707z" clip-rule="evenodd"/></svg>
-    </button>
+        <div class="bg-white rounded-2xl shadow p-6 flex flex-col items-center">
+            <img src="images/grad.jpg" alt="Member" class="w-20 h-20 rounded-full object-cover mb-3 border-2 border-alum">
+            <h2 class="font-semibold text-base">John Smith</h2>
+            <p class="text-sm text-gray-600 mb-1">Class of 2012</p>
+            <p class="text-xs text-gray-500 text-center">Entrepreneur</p>
+        </div>
+        <div class="bg-white rounded-2xl shadow p-6 flex flex-col items-center">
+            <img src="images/grad.jpg" alt="Member" class="w-20 h-20 rounded-full object-cover mb-3 border-2 border-alum">
+            <h2 class="font-semibold text-base">Jane Doe</h2>
+            <p class="text-sm text-gray-600 mb-1">Class of 2015</p>
+            <p class="text-xs text-gray-500 text-center">Software Engineer, Google</p>
+        </div>
+        <div class="bg-white rounded-2xl shadow p-6 flex flex-col items-center">
+            <img src="images/grad.jpg" alt="Member" class="w-20 h-20 rounded-full object-cover mb-3 border-2 border-alum">
+            <h2 class="font-semibold text-base">John Smith</h2>
+            <p class="text-sm text-gray-600 mb-1">Class of 2012</p>
+            <p class="text-xs text-gray-500 text-center">Entrepreneur</p>
+        </div>
+        <div class="bg-white rounded-2xl shadow p-6 flex flex-col items-center">
+            <img src="images/grad.jpg" alt="Member" class="w-20 h-20 rounded-full object-cover mb-3 border-2 border-alum">
+            <h2 class="font-semibold text-base">Jane Doe</h2>
+            <p class="text-sm text-gray-600 mb-1">Class of 2015</p>
+            <p class="text-xs text-gray-500 text-center">Software Engineer, Google</p>
+        </div>
+        <div class="bg-white rounded-2xl shadow p-6 flex flex-col items-center">
+            <img src="images/grad.jpg" alt="Member" class="w-20 h-20 rounded-full object-cover mb-3 border-2 border-alum">
+            <h2 class="font-semibold text-base">John Smith</h2>
+            <p class="text-sm text-gray-600 mb-1">Class of 2012</p>
+            <p class="text-xs text-gray-500 text-center">Entrepreneur</p>
+        </div>
+        <!-- Add more member cards as needed -->
+    </div>
   </main>
 
+  <footer class="bg-white border-t mt-12">
+    <div class="max-w-7xl mx-auto px-6 py-8 text-sm text-gray-600">© <span id="year"></span> Alumni Association. All rights reserved.</div>
+  </footer>
+  
   <!-- Scripts -->
   <script>
     // Year
@@ -196,6 +219,15 @@
           const y = target.getBoundingClientRect().top + window.scrollY - 80;
           window.scrollTo({top: y, behavior: 'smooth'});
         }
+      });
+    });
+
+    // Simple search filter
+    document.getElementById('searchInput').addEventListener('input', function() {
+      const query = this.value.toLowerCase();
+      document.querySelectorAll('#membersGrid > div').forEach(card => {
+        const name = card.querySelector('h2').textContent.toLowerCase();
+        card.style.display = name.includes(query) ? '' : 'none';
       });
     });
   </script>
