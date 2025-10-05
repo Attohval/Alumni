@@ -50,16 +50,14 @@
 
   <div class="hidden lg:flex items-center gap-8">
         <a class="nav-link text-sm font-medium hover:text-alum" href="index.html">Home</a>
-        <a class="nav-link text-sm font-medium hover:text-alum" href="#about">About</a>
-        <a class="nav-link text-sm font-medium hover:text-alum" href="#events">Events</a>
-        <a class="nav-link text-sm font-medium hover:text-alum" href="#news">News</a>
-        <a class="nav-link text-sm font-medium hover:text-alum" href="#gallery">Gallery</a>
-        <a class="nav-link text-sm font-medium hover:text-alum" href="#contact">Contact</a>
+        <a class="nav-link text-sm font-medium hover:text-alum" href="members.html">Members</a>
+        <a class="nav-link text-sm font-medium hover:text-alum" href="gallery.html">Gallery</a>
+        <a class="nav-link text-sm font-medium hover:text-alum" href="contact.html">Contact</a>
       </div>
 
       <!-- Desktop CTA + Mobile Menu Button -->
       <div class="flex items-center gap-3">
-  <a href="#events" class="hidden lg:inline-block bg-alum hover:bg-alum/80 transition duration-700 ease-in-out text-white px-4 py-2 rounded-md text-sm font-medium shadow">Upcoming Events</a>
+  <!-- <a href="#events" class="hidden lg:inline-block bg-alum hover:bg-alum/80 transition duration-700 ease-in-out text-white px-4 py-2 rounded-md text-sm font-medium shadow">Upcoming Events</a> -->
 
   <button id="menuBtn" class="lg:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-alum/40" aria-label="Open menu">
           <!-- Hamburger -->
@@ -80,7 +78,7 @@
   <aside class="absolute right-0 top-0 h-full w-3/5 bg-white shadow-2xl p-6 transform transition-transform translate-x-0 lg:hidden">
         <div class="flex items-center justify-between">
           <div class="flex items-center gap-3">
-            <img class="w-6 h-18" src="images/logo.jpg" alt="Logo">
+            <img class="w-16 h-18" src="images/logo.jpg" alt="Logo">
             <!-- <span class="text-lg font-semibold">Alumni</span> -->
           </div>
           <button id="mobileClose" class="p-2 rounded focus:outline-none">
@@ -90,11 +88,9 @@
 
         <nav class="mt-8 flex flex-col gap-4">
           <a href="index.html" class="text-base font-medium">Home</a>
-          <a href="#about" class="text-base font-medium">About</a>
-          <a href="#events" class="text-base font-medium">Events</a>
-          <a href="#news" class="text-base font-medium">News</a>
-          <a href="#gallery" class="text-base font-medium">Gallery</a>
-          <a href="#contact" class="text-base font-medium">Contact</a>
+          <a href="members.html" class="text-base font-medium">Members</a>
+          <a href="gallery.html" class="text-base font-medium">Gallery</a>
+          <a href="contact.html" class="text-base font-medium">Contact</a>
         </nav>
 
         <div class="mt-auto">
@@ -119,8 +115,6 @@
     <section id="contact" class="max-w-7xl mx-auto px-6 py-16">
       <div class="grid lg:grid-cols-2 gap-12">
         <div>
-          <!-- <h2 class="text-2xl font-bold">Contact</h2>
-          <p class="mt-2 text-sm text-gray-500">Questions, event proposals, or press — reach out and we'll respond within a few working days.</p> -->
 
           <div class="mt-6 space-y-4">
             <div class="flex items-start gap-4">
@@ -135,7 +129,7 @@
               <svg class="w-6 h-6 text-alum mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m0 4v10"/></svg>
               <div>
                 <div class="font-medium"><strong>School:</strong></div>
-                <div class="text-sm text-gray-500">123 Campus Drive, City, Country</div>
+                <div class="text-sm text-gray-500">123 Somewhere Around The World</div>
               </div>
             </div>
 
@@ -143,7 +137,9 @@
 
           <!-- Map placeholder -->
           <div class="mt-6">
-            <div class="w-full h-48 bg-gray-100 rounded-lg flex items-center justify-center text-sm text-gray-400">Map placeholder — replace with embed</div>
+            <div class="w-full h-48 bg-gray-100 rounded-lg flex items-center justify-center text-sm text-gray-400">
+              <img class="w-full h-full object-cover rounded-lg" src="images/map.jpeg" alt="location-map">
+            </div>
           </div>
         </div>
 

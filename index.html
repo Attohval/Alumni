@@ -52,7 +52,8 @@
         <a class="nav-link text-sm font-medium hover:text-alum" href="#about">About</a>
         <a class="nav-link text-sm font-medium hover:text-alum" href="#events">Events</a>
         <a class="nav-link text-sm font-medium hover:text-alum" href="#news">News</a>
-        <a class="nav-link text-sm font-medium hover:text-alum" href="#gallery">Gallery</a>
+        <a class="nav-link text-sm font-medium hover:text-alum" href="members.html">Members</a>
+        <a class="nav-link text-sm font-medium hover:text-alum" href="gallery.html">Gallery</a>
         <a class="nav-link text-sm font-medium hover:text-alum" href="contact.html">Contact</a>
       </div>
 
@@ -91,7 +92,9 @@
           <a href="#about" class="text-base font-medium">About</a>
           <a href="#events" class="text-base font-medium">Events</a>
           <a href="#news" class="text-base font-medium">News</a>
+          <a href="members.html" class="text-base font-medium">Members</a>
           <a href="gallery.html" class="text-base font-medium">Gallery</a>
+          <a href="images/Constitution.pdf" download="Alumni_Constitution.pdf">Get Constitution</a>
           <a href="contact.html" class="text-base font-medium">Contact</a>
         </nav>
 
@@ -146,52 +149,67 @@
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="max-w-7xl mx-auto px-6 py-16">
+
+    <section id="about" class="max-w-7xl mx-auto px-6 py-20">
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div>
-          <h2 class="text-3xl font-bold">About the Alumni Association</h2>
-          <p class="mt-4 text-gray-600">We are a community of former students committed to giving back, networking, and supporting one another. Our mission is to foster lifelong relationships, create opportunities for mentorship, and preserve the legacy of our alma mater.</p>
-
-          <ul class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <li class="flex gap-3 items-start">
-              <svg class="w-6 h-6 text-alum mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/></svg>
-              <div>
-                <p class="font-medium">Mentorship</p>
-                <p class="text-sm text-gray-500">Structured support for students and recent grads.</p>
+          <h2 class="text-4xl font-extrabold mb-4 text-alum">About Our Alumni</h2>
+          <p class="text-lg text-gray-700 mb-6">Vtech Alumni Association is a vibrant network of graduates, united by shared experiences and a passion for lifelong learning, leadership, and service. We celebrate our diverse journeys and empower each other to make a difference in our communities and professions.</p>
+          <div class="mb-8">
+            <div class="flex gap-6">
+              <div class="flex flex-col items-center">
+                <img src="images/grad.jpg" alt="Alumni" class="w-20 h-20 rounded-full object-cover border-2 border-alum mb-2">
+                <span class="text-sm font-medium text-gray-600">Global Network</span>
               </div>
-            </li>
-            <li class="flex gap-3 items-start">
-              <svg class="w-6 h-6 text-alum mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h4l3 8 4-16 3 8h4"/></svg>
-              <div>
-                <p class="font-medium">Events</p>
-                <p class="text-sm text-gray-500">Conferences, reunions, and local meetups.</p>
+              <div class="flex flex-col items-center">
+                <img src="images/logo.jpg" alt="Logo" class="w-20 h-20 rounded-full object-cover border-2 border-alum mb-2">
+                <span class="text-sm font-medium text-gray-600">Shared Legacy</span>
               </div>
-            </li>
-          </ul>
-        </div>
-
-        <div class="space-y-4">
-          <div class="p-6 bg-white rounded-2xl shadow">
-            <h3 class="font-semibold">Our School History</h3>
-            <p class="text-sm text-gray-500 mt-2">Established in 1992, our association has grown into a vibrant organization connecting alumni across the world.</p>
+              <div class="flex flex-col items-center">
+                <img src="images/graduation.jpg" alt="Graduation" class="w-20 h-20 rounded-full object-cover border-2 border-alum mb-2">
+                <span class="text-sm font-medium text-gray-600">Impact & Service</span>
+              </div>
+            </div>
           </div>
-
-          <div class="p-6 bg-white rounded-2xl shadow">
-            <h3 class="font-semibold">Get Involved</h3>
-            <p class="text-sm text-gray-500 mt-2">Volunteer at events, mentor students, or share job opportunities through our news page.</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="bg-white rounded-xl shadow p-5">
+              <h3 class="font-semibold text-alum mb-2">Our Mission</h3>
+              <p class="text-sm text-gray-500">To connect, inspire, and support alumni in their personal and professional growth, while giving back to our alma mater and society.</p>
+            </div>
+            <div class="bg-white rounded-xl shadow p-5">
+              <h3 class="font-semibold text-alum mb-2">Core Values</h3>
+              <ul class="list-disc ml-5 text-sm text-gray-500">
+                <li>Mentorship & Collaboration</li>
+                <li>Celebrating Achievements</li>
+                <li>Community Service</li>
+                <li>Inclusivity & Diversity</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-6">
+          <div class="p-6 bg-white rounded-2xl shadow flex flex-col items-center">
+            <img src="images/graduation.jpg" alt="History" class="w-32 h-32 rounded-full object-cover mb-4">
+            <h3 class="font-semibold text-lg">Our Story</h3>
+            <p class="text-sm text-gray-500 mt-2 text-center">Founded in 1992, our alumni community has grown to thousands of members worldwide, united by a commitment to excellence and connection.</p>
+          </div>
+          <div class="p-6 bg-white rounded-2xl shadow flex flex-col items-center">
+            <img src="images/grad.jpg" alt="Involvement" class="w-32 h-32 rounded-full object-cover mb-4">
+            <h3 class="font-semibold text-lg">Get Involved</h3>
+            <p class="text-sm text-gray-500 mt-2 text-center">Join us as a mentor, volunteer, or event organizer. Your participation strengthens our network and creates new opportunities for all.</p>
           </div>
         </div>
       </div>
     </section>
 
       <!-- LEADER SECTION -->
-      <section id="leader" class="max-w-7xl mx-auto px-6 py-16">
+      <section id="leader" class="max-w-7xl mx-auto px-6 py-16 border-t">
+        <h2 class="text-2xl font-bold mb-2">Alumni Leader</h2>
         <div class="flex flex-col md:flex-row items-center gap-10">
           <div class="flex-shrink-0">
             <img src="images/Nicholas Ovuzorie.jpg" alt="President" class="w-40 h-40 rounded-full object-cover shadow-lg border-4 border-alum">
           </div>
           <div>
-            <h2 class="text-2xl font-bold mb-2">Alumni Leader</h2>
             <p class="text-lg font-semibold text-alum">Mr. Nicholas Ovuzorie</p>
             <p class="text-sm text-gray-600 mb-4">President, Alumni Association</p>
             <p class="text-gray-500 max-w-md mb-6">Dedicated to fostering alumni connections and driving impactful initiatives for our community.</p>
@@ -205,7 +223,7 @@
       <div class="max-w-7xl mx-auto px-6">
         <div class="flex items-center justify-between">
           <h2 class="text-2xl font-bold">Upcoming Events</h2>
-          <a href="#contact" class="text-sm font-medium text-alum">Contact to host an event →</a>
+          <a href="contact.html" class="text-sm font-medium text-alum">Contact to host an event →</a>
         </div>
 
         <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -303,7 +321,7 @@
               <svg class="w-6 h-6 text-alum mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m0 4v10"/></svg>
               <div>
                 <div class="font-medium"><strong>School:</strong></div>
-                <div class="text-sm text-gray-500">123 Campus Drive, City, Country</div>
+                <div class="text-sm text-gray-500">123 Somewhere Around The World</div>
               </div>
             </div>
 
@@ -311,7 +329,9 @@
 
           <!-- Map placeholder -->
           <div class="mt-6">
-            <div class="w-full h-48 bg-gray-100 rounded-lg flex items-center justify-center text-sm text-gray-400">Map placeholder — replace with embed</div>
+            <div class="w-full h-48 bg-gray-100 rounded-lg flex items-center justify-center text-sm text-gray-400">
+              <img class="w-full h-full object-cover rounded-lg" src="images/map.jpeg" alt="location-map">
+            </div>
           </div>
         </div>
 
