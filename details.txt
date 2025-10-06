@@ -3,3 +3,7 @@ navy blue = #020353, rgb(2, 3, 83)
 dark gold = #917C21, rgb(145, 124, 33)
 
 light gold = #E0BE43, rgb(224, 190, 67)
+
+make sure meu items scrolls on mobile landscape
+
+<a href="images/Constitution.pdf" download="Alumni_Constitution.pdf">Get Constitution</a>

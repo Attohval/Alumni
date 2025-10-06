@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alumni Constitution — Vtech Alumni</title>
+  <meta name="description" content="Constitution of the Vtech Alumni Association." />
+<link rel="icon" href="images/favicon.jpg" type="image/x-icon">
+
+   <!-- Tailwind CDN (Play) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Optional: Tailwind config for extended fonts/colors -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            alum: '#0b3d91',
+            accent: '#f59e0b'
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Icons (Heroicons) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* small cosmetic helpers */
+    .glass { background: rgba(255,255,255,0.6); backdrop-filter: blur(6px); }
+    .nav-link { transition: color .18s, transform .18s; }
+    .nav-link:hover { transform: translateY(-2px); }
+  </style>
+</head>
+<body class="antialiased text-gray-800 bg-gray-50 font-sans">
+  <a href="#mainContent" class="sr-only focus:not-sr-only absolute top-2 left-2 bg-alum text-white px-3 py-2 rounded">Skip to content</a>
+    <!-- NAVBAR -->
+  <header class="fixed bg-white inset-x-0 top-0 z-40">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="flex items-center gap-3 text-alum font-semibold text-lg">
+          <!-- Logo mark -->
+            <img class="w-9 h-12" src="images/logo.jpg" alt="Logo">
+            <span>Vtech Alumni</span>
+        </a>
+      </div>
+
+  <div class="hidden lg:flex items-center gap-8">
+        <a class="nav-link text-sm font-medium hover:text-alum" href="index.html">Home</a>
+        <a class="nav-link text-sm font-medium hover:text-alum" href="leaders.html">Leaders</a>
+        <a class="nav-link text-sm font-medium hover:text-alum" href="members.html">Members</a>
+        <a class="nav-link text-sm font-medium hover:text-alum" href="gallery.html">Gallery</a>
+        <a class="nav-link text-sm font-medium hover:text-alum" href="constitution.html">Constitution</a>
+      </div>
+
+      <!-- Desktop CTA + Mobile Menu Button -->
+      <div class="flex items-center gap-3">
+  <a href="contact.html" class="hidden lg:inline-block bg-alum hover:bg-alum/80 transition duration-700 ease-in-out text-white px-4 py-2 rounded-md text-sm font-medium shadow">Get In Touch</a>
+
+  <button id="menuBtn" class="lg:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-alum/40" aria-label="Open menu">
+          <!-- Hamburger -->
+          <svg id="hamburger" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <!-- Close icon (hidden) -->
+          <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden " fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile slide-in menu -->
+    <div id="mobileMenu" class="fixed inset-0 z-50 hidden">
+      <div id="menuOverlay" class="absolute inset-0 bg-black/30"></div>
+  <aside class="absolute right-0 top-0 h-full w-3/5 bg-white shadow-2xl p-6 transform transition-transform translate-x-0 lg:hidden">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <img class="w-16 h-18" src="images/logo.jpg" alt="Logo">
+            <!-- <span class="text-lg font-semibold">Alumni</span> -->
+          </div>
+          <button id="mobileClose" class="p-2 rounded focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+          </button>
+        </div>
+
+        <nav class="mt-8 flex flex-col gap-4">
+          <a href="index.html" class="text-base font-medium">Home</a>
+          <a href="leaders.html" class="text-base font-medium">Leaders</a>
+          <a href="members.html" class="text-base font-medium">Members</a>
+          <a href="gallery.html" class="text-base font-medium">Gallery</a>
+          <a href="constitution.html" class="text-base font-medium">Constitution</a>
+          <a href="contact.html" class="text-base font-medium">Contact</a>
+        </nav>
+
+        <div class="mt-auto">
+          <p class="text-sm text-gray-500">Stay connected — join us at events and through our updates.</p>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto mt-20 px-6 py-16">
+    <h1 class="text-4xl font-extrabold mb-8 text-alum" id="mainContent">Constitution of the Vtech Alumni Association</h1>
+    <div class="flex flex-col lg:flex-row gap-8">
+      <aside class="lg:w-1/4 mb-8 lg:mb-0 sticky top-24 self-start">
+        <nav aria-label="Constitution navigation" class="bg-white rounded-xl shadow p-4">
+          <div class="flex items-center justify-between mb-4">
+            <h2 class="text-lg font-bold text-alum">Contents</h2>
+            <button id="tocToggle" class="lg:hidden text-alum px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-alum/40" aria-label="Toggle table of contents">
+              <span id="tocToggleIcon">▼</span>
+            </button>
+          </div>
+          <ul id="tocList" class="space-y-2 text-sm font-medium">
+            <li><a href="#preamble" class="text-alum hover:underline">Preamble</a></li>
+            <li><a href="#article1" class="text-alum hover:underline">Article I: Name & Purpose</a></li>
+            <li><a href="#article2" class="text-alum hover:underline">Article II: Membership</a></li>
+            <li><a href="#article3" class="text-alum hover:underline">Article III: Leadership</a></li>
+            <li><a href="#article4" class="text-alum hover:underline">Article IV: Meetings</a></li>
+            <li><a href="#article5" class="text-alum hover:underline">Article V: Amendments</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <section class="lg:w-3/4 bg-white rounded-2xl shadow p-8" style="min-width:0;">
+        <section id="preamble" class="mb-10">
+          <h2 class="text-2xl font-bold mb-2">Preamble</h2>
+          <p class="text-gray-700">We, the alumni of Vtech, united by shared experiences and a commitment to lifelong learning, establish this constitution to guide our association, foster community, and promote excellence.</p>
+        </section>
+        <section id="article1" class="mb-10">
+          <h2 class="text-xl font-semibold mb-2">Article I: Name & Purpose</h2>
+          <ul class="list-disc ml-6 text-gray-700">
+            <li><strong>Name:</strong> The organization shall be known as the Vtech Alumni Association.</li>
+            <li><strong>Purpose:</strong> To connect alumni, support professional and personal growth, and give back to our alma mater and society.</li>
+          </ul>
+        </section>
+        <section id="article2" class="mb-10">
+          <h2 class="text-xl font-semibold mb-2">Article II: Membership</h2>
+          <ul class="list-disc ml-6 text-gray-700">
+            <li>Membership is open to all graduates and former students of Vtech.</li>
+            <li>Members shall uphold the values and mission of the association.</li>
+            <li>Membership benefits include networking, mentorship, and event participation.</li>
+          </ul>
+        </section>
+        <section id="article3" class="mb-10">
+          <h2 class="text-xl font-semibold mb-2">Article III: Leadership</h2>
+          <ul class="list-disc ml-6 text-gray-700">
+            <li>The association shall be governed by elected officers: President, Vice President, Secretary, Treasurer, and other roles as needed.</li>
+            <li>Officers shall serve for a term of two years and may be re-elected.</li>
+            <li>Duties include organizing events, managing finances, and representing alumni interests.</li>
+          </ul>
+        </section>
+        <section id="article4" class="mb-10">
+          <h2 class="text-xl font-semibold mb-2">Article IV: Meetings</h2>
+          <ul class="list-disc ml-6 text-gray-700">
+            <li>General meetings shall be held at least once per year.</li>
+            <li>Special meetings may be called by the President or a majority of officers.</li>
+            <li>Quorum for meetings shall be 20% of active members.</li>
+          </ul>
+        </section>
+        <section id="article5" class="mb-10">
+          <h2 class="text-xl font-semibold mb-2">Article V: Amendments</h2>
+          <ul class="list-disc ml-6 text-gray-700">
+            <li>This constitution may be amended by a two-thirds vote of active members present at a general meeting.</li>
+            <li>Proposed amendments must be submitted in writing at least two weeks prior to the meeting.</li>
+          </ul>
+        </section>
+        <div class="mt-8 flex gap-4">
+          <button onclick="window.print()" class="bg-alum text-white px-4 py-2 rounded-md font-medium shadow hover:bg-alum/80" aria-label="Print constitution">Print</button>
+          <a href="#" onclick="window.print()" class="bg-gray-100 text-alum px-4 py-2 rounded-md font-medium shadow hover:bg-gray-200" aria-label="Download as PDF">Download PDF</a>
+        </div>
+      </section>
+    </div>
+
+    <!-- Back to top button -->
+   <button id="backToTop" class="fixed bottom-6 right-6 bg-alum text-white p-3 rounded-full shadow-lg hover:bg-alum/80 transition duration-300 hidden" aria-label="Back to top">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+      </svg>
+    </button>
+  </main>
+  <footer class="bg-white border-t mt-12">
+    <div class="max-w-7xl mx-auto px-6 py-8 text-sm text-gray-600">© <span id="year"></span> Alumni Association. All rights reserved.</div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Collapsible TOC for mobile
+    const tocToggle = document.getElementById('tocToggle');
+    const tocList = document.getElementById('tocList');
+    const tocToggleIcon = document.getElementById('tocToggleIcon');
+    if (tocToggle && tocList && tocToggleIcon) {
+      tocToggle.addEventListener('click', function() {
+        if (tocList.classList.contains('hidden')) {
+          tocList.classList.remove('hidden');
+          tocToggleIcon.textContent = '▼';
+        } else {
+          tocList.classList.add('hidden');
+          tocToggleIcon.textContent = '▲';
+        }
+      });
+      // Hide TOC by default on mobile
+      if (window.innerWidth < 1024) {
+        tocList.classList.add('hidden');
+        tocToggleIcon.textContent = '▲';
+      }
+      window.addEventListener('resize', function() {
+        if (window.innerWidth < 1024) {
+          tocList.classList.add('hidden');
+          tocToggleIcon.textContent = '▲';
+        } else {
+          tocList.classList.remove('hidden');
+          tocToggleIcon.textContent = '▼';
+        }
+      });
+    }
+
+        // Mobile menu behavior
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileClose = document.getElementById('mobileClose');
+    const menuOverlay = document.getElementById('menuOverlay');
+    const hamburger = document.getElementById('hamburger');
+    const closeIcon = document.getElementById('closeIcon');
+
+    function openMenu() {
+      mobileMenu.classList.remove('hidden');
+      document.querySelector('aside').style.transform = 'translateX(0)';
+      hamburger.classList.add('hidden');
+      closeIcon.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      document.querySelector('aside').style.transform = 'translateX(110%)';
+      setTimeout(()=> mobileMenu.classList.add('hidden'), 240);
+      hamburger.classList.remove('hidden');
+      closeIcon.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    menuBtn.addEventListener('click', ()=>{
+      if (mobileMenu.classList.contains('hidden')) openMenu(); else closeMenu();
+    });
+    mobileClose.addEventListener('click', closeMenu);
+    menuOverlay.addEventListener('click', closeMenu);
+
+    // Close mobile menu when clicking any link inside it
+    document.querySelectorAll('#mobileMenu a').forEach(a=> a.addEventListener('click', closeMenu));
+
+    // Back to top button
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', ()=>{
+      if (window.scrollY > 300) backToTop.classList.remove('hidden'); else backToTop.classList.add('hidden');
+    });
+    backToTop.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
+
+    // Smooth scrolling for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(link=>{
+      link.addEventListener('click', function(e){
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          const y = target.getBoundingClientRect().top + window.scrollY - 80;
+          window.scrollTo({top: y, behavior: 'smooth'});
+        }
+      });
+    });
+
+  </script>
+</body>
+</html>
