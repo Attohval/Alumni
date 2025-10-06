@@ -105,85 +105,293 @@
     </div>
   </header>
 
-  <main class="max-w-5xl mx-auto mt-20 px-6 py-16">
-    <h1 class="text-4xl font-extrabold mb-8 text-alum" id="mainContent">Constitution of the Vtech Alumni Association</h1>
-    <div class="flex flex-col lg:flex-row gap-8">
-      <aside class="lg:w-1/4 mb-8 lg:mb-0 sticky top-24 self-start">
-        <nav aria-label="Constitution navigation" class="bg-white rounded-xl shadow p-4">
-          <div class="flex items-center justify-between mb-4">
-            <h2 class="text-lg font-bold text-alum">Contents</h2>
-            <button id="tocToggle" class="lg:hidden text-alum px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-alum/40" aria-label="Toggle table of contents">
-              <span id="tocToggleIcon">▼</span>
-            </button>
-          </div>
-          <ul id="tocList" class="space-y-2 text-sm font-medium">
-            <li><a href="#preamble" class="text-alum hover:underline">Preamble</a></li>
-            <li><a href="#article1" class="text-alum hover:underline">Article I: Name & Purpose</a></li>
-            <li><a href="#article2" class="text-alum hover:underline">Article II: Membership</a></li>
-            <li><a href="#article3" class="text-alum hover:underline">Article III: Leadership</a></li>
-            <li><a href="#article4" class="text-alum hover:underline">Article IV: Meetings</a></li>
-            <li><a href="#article5" class="text-alum hover:underline">Article V: Amendments</a></li>
-          </ul>
-        </nav>
-      </aside>
-      <section class="lg:w-3/4 bg-white rounded-2xl shadow p-8" style="min-width:0;">
-        <section id="preamble" class="mb-10">
-          <h2 class="text-2xl font-bold mb-2">Preamble</h2>
-          <p class="text-gray-700">We, the alumni of Vtech, united by shared experiences and a commitment to lifelong learning, establish this constitution to guide our association, foster community, and promote excellence.</p>
-        </section>
-        <section id="article1" class="mb-10">
-          <h2 class="text-xl font-semibold mb-2">Article I: Name & Purpose</h2>
-          <ul class="list-disc ml-6 text-gray-700">
-            <li><strong>Name:</strong> The organization shall be known as the Vtech Alumni Association.</li>
-            <li><strong>Purpose:</strong> To connect alumni, support professional and personal growth, and give back to our alma mater and society.</li>
-          </ul>
-        </section>
-        <section id="article2" class="mb-10">
-          <h2 class="text-xl font-semibold mb-2">Article II: Membership</h2>
-          <ul class="list-disc ml-6 text-gray-700">
-            <li>Membership is open to all graduates and former students of Vtech.</li>
-            <li>Members shall uphold the values and mission of the association.</li>
-            <li>Membership benefits include networking, mentorship, and event participation.</li>
-          </ul>
-        </section>
-        <section id="article3" class="mb-10">
-          <h2 class="text-xl font-semibold mb-2">Article III: Leadership</h2>
-          <ul class="list-disc ml-6 text-gray-700">
-            <li>The association shall be governed by elected officers: President, Vice President, Secretary, Treasurer, and other roles as needed.</li>
-            <li>Officers shall serve for a term of two years and may be re-elected.</li>
-            <li>Duties include organizing events, managing finances, and representing alumni interests.</li>
-          </ul>
-        </section>
-        <section id="article4" class="mb-10">
-          <h2 class="text-xl font-semibold mb-2">Article IV: Meetings</h2>
-          <ul class="list-disc ml-6 text-gray-700">
-            <li>General meetings shall be held at least once per year.</li>
-            <li>Special meetings may be called by the President or a majority of officers.</li>
-            <li>Quorum for meetings shall be 20% of active members.</li>
-          </ul>
-        </section>
-        <section id="article5" class="mb-10">
-          <h2 class="text-xl font-semibold mb-2">Article V: Amendments</h2>
-          <ul class="list-disc ml-6 text-gray-700">
-            <li>This constitution may be amended by a two-thirds vote of active members present at a general meeting.</li>
-            <li>Proposed amendments must be submitted in writing at least two weeks prior to the meeting.</li>
-          </ul>
-        </section>
-        <div class="mt-8 flex gap-4">
-          <button onclick="window.print()" class="bg-alum text-white px-4 py-2 rounded-md font-medium shadow hover:bg-alum/80" aria-label="Print constitution">Print</button>
-          <a href="#" onclick="window.print()" class="bg-gray-100 text-alum px-4 py-2 rounded-md font-medium shadow hover:bg-gray-200" aria-label="Download as PDF">Download PDF</a>
+  <!-- Constitution Title -->
+  <section class="bg-blue-900 mt-20 text-white py-6 text-center shadow-md">
+    <h1 class="text-2xl md:text-3xl font-bold uppercase">Constitution</h1>
+    <p class="text-lg">Delta Careers College Warri Alumni 2000 Set</p>
+    <p class="italic text-sm">[As Amended]</p>
+  </section>
+
+  <!-- Preamble -->
+  <section class="max-w-4xl mx-auto p-6">
+    <h2 class="text-xl font-semibold text-blue-800 border-b pb-2 mb-4">Preamble</h2>
+    <p class="leading-relaxed">
+      WHEREAS, we the Alumni of Delta Careers College, Warri having firmly and unanimously resolved to organize
+      ourselves into a united and purposeful body to foster unity, promote the spirit of co-operation, understanding,
+      general welfare of members and to contribute our quota to the growth and development of our alma mater,
+      give unto ourselves the following constitution.
+    </p>
+  </section>
+
+  <!-- Articles -->
+  <section class="max-w-4xl mx-auto p-6 space-y-6">
+    <h2 class="text-xl font-semibold text-blue-800 border-b pb-2">Articles</h2>
+
+    <!-- ARTICLE ONE -->
+    <div class="border rounded-lg shadow-sm">
+      <button class="w-full text-left px-4 py-3 bg-gray-100 font-semibold hover:bg-gray-200" 
+              onclick="toggleContent('article1')">
+        Article One: Title, Name, Objectives & Membership
+      </button>
+      <div id="article1" class="hidden px-4 py-3 space-y-2 text-sm leading-relaxed">
+        <p><strong>Title:</strong> This constitution shall be known as the Constitution of Delta Careers College Alumni, 2000.</p>
+        <p><strong>Name:</strong> The Association shall be known as Delta Careers College Alumni, 2000 (DCC2000 ALUMNI).</p>
+        <p><strong>Aims & Objectives:</strong></p>
+        <ul class="list-[lower-alpha] list-inside">
+          <li>To foster unity and love among members.</li>
+          <li>To create a social environment for interaction and integration.</li>
+          <li>To identify with the needs of members and the college.</li>
+          <li>To seek the progress and development of the alma mater.</li>
+        </ul>
+        <p><strong>Membership</strong></p>
+        <ul class="list-[lower-alpha] list-inside">
+          <li>Membership shall be open to anyone who spent at least one academic session in the set, subject to screening by executives.</li>
+        </ul>
+        <p><strong>MEMBERSHIP DUES AND LEVIES</strong></p>
+        <ul class="list-[lower-alpha] list-inside">
+          <li>All members shall be required to pay a monthly membership due 
+            and levies as may be imposed, which shall be fixed from time to 
+            time by the general house.
+        </li>
+        <li>No One shall be exempted from paying dues for any reason. 
+            However, if any member feel he or she should be exempted from 
+            paying dues, he/ she has to apply to the welfare committee, 
+            stating why he or she should be exempted and for how long 
+            (Exemption is subject to approval of the committee and the 
+            Excos, after due investigation).
+        </li>
+        </ul>
+        <p><strong>TERMINATION OF MEMBERSHIP</strong></p>
+        <p>Membership shall be terminated by any of the following:-</p>
+        <ul class="list-[lower-alpha] list-inside">
+          <li>Death of member.
+        </li>
+        <li>Through expulsion of member.
+        </li>
+        <li>Through withdrawal of membership, which shall be entertained 
+            only after 3 meetings of the Association; provided no refunds 
+            shall be made on levies already paid.
+        </li>
+        </ul>
+        <p><strong>SANCTION OF MEMBERS</strong></p>
+        <p>Members shall be sanctioned by way of fines, suspension and 
+            expulsion for any of the following offences:-</p>
+        <ul class="list-[lower-alpha] list-inside">
+          <li>Repeated failure to attend meetings or contribute in the 
+            discussions via WhatsApp Group for Two (2) consecutive times 
+            without notice.
+        </li>
+        <li>Failure to pay prescribed dues/levies for one year, after a review 
+            by the executive.
+        </li>
+        <li>If found guilty of consistent gross misconduct on more than two 
+            occasions.
+        </li>
+        </ul>
+        <p><strong>WELFARE OF MEMBERS</strong></p>
+        <ul class="list-[lower-alpha] list-inside">
+          <li>
+            Subject to the provisions of sections 1.3 of Article 1 & 4.0 of 
+Article 4 of this constitution, a member shall:
+            <ul class="list-[lower-roman] list-inside ml-4">
+              <li>Be honoured with a delegation and the presentation of a 
+                purse by the Association at the burial ceremony of any of 
+                his/her parents; provided a purse shall not be presented 
+                on more than one occasion.</li>
+              <li>Be honoured with a delegation and the presentation of a 
+purse by the Association when getting married, 
+celebrating marriage anniversary or any social event 
+nominated by the member, provided a purse shall be 
+presented in not more than one occasion.
+              </li>
+              <li>In both cases, notice of a reasonable time is given to the 
+Association.</li>
+            </ul>
+          </li>
+        <li>In the event of the death of a member not in default of 
+provisions of section 1.4 of Article 1 of this constitution shall be 
+entitled to a fully participated burial/funeral ceremony by all 
+members.
+        </li>
+        <li>The dependants of a departed member shall be presented a 
+purse in the presence of the family during a condolence visit 
+prior to the burial, of an amount to be determined by the 
+Association.
+        </li>
+        <li>Any member who fails to attend the burial/funeral ceremony of 
+a member without an excuse, shall be liable to a fine of an 
+amount to be determined by the house.</li>
+        </ul>
+
         </div>
-      </section>
     </div>
 
-    <!-- Back to top button -->
+    <!-- ARTICLE TWO -->
+    <div class="border rounded-lg shadow-sm">
+      <button class="w-full text-left px-4 py-3 bg-gray-100 font-semibold hover:bg-gray-200"
+              onclick="toggleContent('article2')">
+        Article Two: Administrative Structure
+      </button>
+      <div id="article2" class="hidden px-4 py-3 space-y-2 text-sm leading-relaxed">
+        <p><strong>Organs:</strong></p>
+        <ul class="list-[lower-roman] list-inside">
+          <li>National Executive Council</li>
+          <li>Board of Trustees</li>
+          <li>Standing Committees</li>
+        </ul>
+        <p><strong>National Executive Council:</strong> Elected every 2 years, with offices including President, Vice President, Secretary, Treasurer, Welfare Officer, Auditor, etc.</p>
+        <p><strong>Powers:</strong> Manage affairs, summon meetings, present reports, organize events, appoint committees, formulate policy.</p>
+        <p><strong>Functions of Officers:</strong> Each office has defined duties (President, VP, Secretary, Treasurer, Financial Sec, Welfare Officer, Legal Adviser, Auditor, PRO, Chapter Chairs).</p>
+        <p><strong>Tenure:</strong> Two years, renewable once; extensions possible if no replacements.</p>
+        <p><strong>Board of Trustees:</strong> Nine senior members, tenure 3 years, arbitrate disputes, safeguard heritage, promote alma mater’s development.</p>
+      </div>
+    </div>
+
+    <!-- ARTICLE THREE -->
+    <div class="border rounded-lg shadow-sm">
+      <button class="w-full text-left px-4 py-3 bg-gray-100 font-semibold hover:bg-gray-200"
+              onclick="toggleContent('article3')">
+        Article Three: Conduct of Association Affairs
+      </button>
+      <div id="article3" class="hidden px-4 py-3 space-y-2 text-sm leading-relaxed">
+        <p><strong>Meetings:</strong></p>
+        <ul class="list-[lower-alpha] list-inside">
+          <li>General meeting 3 times yearly.</li>
+          <li>Emergency meetings by President or 2/3 Excos.</li>
+          <li>Branches may hold independent meetings.</li>
+          <li>End of year party annually.</li>
+        </ul>
+        <p><strong>Quorum:</strong> 8 registered/financial members.</p>
+      </div>
+    </div>
+
+    <!-- ARTICLE FOUR -->
+    <div class="border rounded-lg shadow-sm">
+      <button class="w-full text-left px-4 py-3 bg-gray-100 font-semibold hover:bg-gray-200"
+              onclick="toggleContent('article4')">
+        Article Four: Rules, Regulations and Sanctions
+      </button>
+      <div id="article4" class="hidden px-4 py-3 text-sm leading-relaxed">
+        <p>Subject to the provision of the constitution, the General House shall 
+have powers to make rules, regulations and sanctions to regulate its 
+activities generally.</p>
+      </div>
+    </div>
+
+    <!-- ARTICLE FIVE -->
+    <div class="border rounded-lg shadow-sm">
+      <button class="w-full text-left px-4 py-3 bg-gray-100 font-semibold hover:bg-gray-200"
+              onclick="toggleContent('article5')">
+        Article Five: Election of Officers
+      </button>
+      <div id="article5" class="hidden px-4 py-3 space-y-2 text-sm leading-relaxed">
+        <p><strong>Nomination:</strong> Must have good attendance, dues paid, and not impeached before.</p>
+        <p><strong>Qualifications:</strong> Punctual, active members with voting rights.</p>
+        <p><strong>Procedure:</strong></p>
+        <ul class="list-[lower-alpha] list-inside">
+          <li>Open ballot system.</li>
+          <li>Election committee conducts elections.</li>
+          <li>Simple majority wins.</li>
+          <li>Fresh elections for ties.</li>
+          <li>Officers may seek re-election for one additional term.</li>
+        </ul>
+        <p><strong>Bye Election:</strong> If an officer resigns, dies, or is removed.</p>
+      </div>
+    </div>
+
+    <!-- ARTICLE SIX done-->
+    <div class="border rounded-lg shadow-sm">
+      <button class="w-full text-left px-4 py-3 bg-gray-100 font-semibold hover:bg-gray-200"
+              onclick="toggleContent('article6')">
+        Article Six: Removal from Office
+      </button>
+      <div id="article6" class="hidden px-4 py-3 text-sm leading-relaxed">
+        <p>An officer of the Association shall be removed from office if:</p>
+        <ul class="list-[lower-alpha] list-inside">
+          <li>He/she is no longer capable of exercising or performing the 
+functions of his office.</li>
+          <li>He/she is found guilty of an offence of very grave nature.</li>
+          <li>He is consistently absent for a considerable number of meetings 
+without cogent reasons.</li>
+          <li>He/she consistently refuses to behave in proper manners 
+always, whether within or outside the Association.</li>
+<li>Before an officer is removed from office, he/she must be 
+adequately and sufficiently heard or tried and found liable.</li>
+<li>An officer or member who refuses to be tried or refuses to 
+defend himself shall be deemed to have committed the offence 
+for which he is accused and so be accordingly treated.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ARTICLE SEVEN -->
+    <div class="border rounded-lg shadow-sm">
+      <button class="w-full text-left px-4 py-3 bg-gray-100 font-semibold hover:bg-gray-200"
+              onclick="toggleContent('article7')">
+        Article Seven: Finance, Social Activities & Welfare
+      </button>
+      <div id="article7" class="hidden px-4 py-3 space-y-2 text-sm leading-relaxed">
+        <p><strong>Finance Sources:</strong> Monthly dues, donations, levies, fines.</p>
+        <p><strong>Welfare:</strong></p>
+        <ul class="list-[lower-alpha] list-inside">
+          <li>Financial emergency support (subject to committee approval).</li>
+          <li>Dues-paying members entitled to benefits for weddings, childbirth, or parent burial.</li>
+          <li>Freewill donations only for dues-paying members.</li>
+        </ul>
+        <p><strong>Withdrawals:</strong></p>
+        <ul class="list-[lower-alpha] list-inside">
+          <li>Below ₦100k → President approval.</li>
+          <li>Up to ₦200k → Exco approval.</li>
+          <li>Above ₦200k → House approval (emergency exceptions allowed).</li>
+        </ul>
+        <p><strong>Imprest Account:</strong> Treasurer keeps ₦10k imprest at a time.</p>
+      </div>
+    </div>
+
+    <!-- ARTICLE EIGHT done-->
+    <div class="border rounded-lg shadow-sm">
+      <button class="w-full text-left px-4 py-3 bg-gray-100 font-semibold hover:bg-gray-200"
+              onclick="toggleContent('article8')">
+        Article Eight: Amendment of Constitution
+      </button>
+      <div id="article8" class="hidden px-4 py-3 text-sm leading-relaxed">
+        <p>This constitution shall be subject to amendment from time to time 
+according to the following procedure:</p>
+        <ul class="list-decimal list-inside">
+          <li>Any financial member of the Association shall be qualified to 
+move a motion for the amendment of any aspect of the 
+constitution; provided the proposal forms part of the Notice 
+published through a circular of meeting of the Association.</li>
+          <li>Notice of the amendment shall be given at least a month before 
+the date fixed for the meeting.</li>
+          <li>The motion for the amendment shall be supported by at least 
+two third of the members present at a meeting properly 
+convened.</li>
+        </ul>
+      </div>
+
+      <div class="m-8 flex gap-4">
+          <a href="images/Constitution.pdf" download="Constitution.pdf" class="bg-alum text-white px-4 py-2 rounded-md font-medium shadow hover:bg-alum/80" aria-label="Download as PDF">Download PDF</a>
+        </div>
+    </div>
+   </section>
+
+   <!-- Back to top button -->
    <button id="backToTop" class="fixed bottom-6 right-6 bg-alum text-white p-3 rounded-full shadow-lg hover:bg-alum/80 transition duration-300 hidden" aria-label="Back to top">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
       </svg>
     </button>
-  </main>
-  <footer class="bg-white border-t mt-12">
+
+  <!-- Footer -->
+  <section class="bg-blue-900 text-white py-6 mt-10 text-center">
+    <p>Signed and Dated this 28th Day of August, 2023.</p>
+    <p class="mt-2">_________________ President</p>
+    <p class="mt-2">_________________ Secretary</p>
+  </section>
+
+
+  <footer class="bg-white border-t">
     <div class="max-w-7xl mx-auto px-6 py-8 text-sm text-gray-600">© <span id="year"></span> Alumni Association. All rights reserved.</div>
   </footer>
 
@@ -271,6 +479,13 @@
       });
     });
 
+    function toggleContent(id) {
+      const content = document.getElementById(id);
+      content.classList.toggle("hidden");
+    }
+
   </script>
+  
+
 </body>
 </html>
