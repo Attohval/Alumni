@@ -52,14 +52,15 @@
   <div class="hidden lg:flex items-center gap-8">
         <a class="nav-link text-sm font-medium hover:text-alum" href="index.html">Home</a>
         <a class="nav-link text-sm font-medium hover:text-alum" href="about.html">About</a>
+        <a class="nav-link text-sm font-medium hover:text-alum" href="leaders.html">Leaders</a>
         <a class="nav-link text-sm font-medium hover:text-alum" href="members.html">Members</a>
         <a class="nav-link text-sm font-medium hover:text-alum" href="gallery.html">Gallery</a>
-        <a class="nav-link text-sm font-medium hover:text-alum" href="constitution.html">Constitution</a>
-  </div>
+        <a class="nav-link text-sm font-medium hover:text-alum" href="contact.html">Contact</a>
+      </div>
 
       <!-- Desktop CTA + Mobile Menu Button -->
       <div class="flex items-center gap-3">
-  <a href="contact.html" class="hidden lg:inline-block bg-alum hover:bg-alum/80 transition duration-700 ease-in-out text-white px-4 py-2 rounded-md text-sm font-medium shadow">Get In Touch</a>
+  <a href="constitution.html" class="hidden lg:inline-block bg-alum hover:bg-alum/80 transition duration-700 ease-in-out text-white px-4 py-2 rounded-md text-sm font-medium shadow">Constitution</a>
 
   <button id="menuBtn" class="lg:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-alum/40" aria-label="Open menu">
           <!-- Hamburger -->
@@ -91,6 +92,7 @@
         <nav class="mt-8 flex flex-col gap-4">
           <a href="index.html" class="text-base font-medium">Home</a>
           <a href="about.html" class="text-base font-medium">About</a>
+          <a href="leaders.html" class="text-base font-medium">Leaders</a>
           <a href="members.html" class="text-base font-medium">Members</a>
           <a href="gallery.html" class="text-base font-medium">Gallery</a>
           <a href="constitution.html" class="text-base font-medium">Constitution</a>
@@ -103,55 +105,86 @@
       </aside>
     </div>
   </header>
+  <!-- MAIN CONTENT -->
+  <main class="pt-16">  
+    <!-- ABOUT -->
 
-  <!-- HERO -->
-  <main class="pt-16">
-
-    <!-- GALLERY -->
-    <section id="gallery" class="bg-slate-50 py-16">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="flex items-center justify-between">
-          <h2 class="text-2xl font-bold">Gallery</h2>
+    <section id="about" class="max-w-7xl mx-auto px-6 py-20">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-2xl font-extrabold mb-4 text-alum">About Our Alumni</h2>
+          <p class="text-lg text-gray-700 mb-6">DCCW ALUMNI 2000 Association is a vibrant network of graduates, united by shared experiences and a passion for lifelong learning, leadership, and service. We celebrate our diverse journeys and empower each other to make a difference in our communities and professions.</p>
+          <div class="mb-8">
+            <div class="flex gap-6">
+              <div class="flex flex-col items-center">
+                <img src="images/global.png" alt="Alumni" class="w-20 h-20 rounded-full object-cover border-2 border-alum mb-2">
+                <span class="text-sm font-medium text-gray-600">Global Network</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <img src="images/legacy.png" alt="Logo" class="w-20 h-20 rounded-full object-cover border-2 border-alum mb-2">
+                <span class="text-sm font-medium text-gray-600">Shared Legacy</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <img src="images/impact.png" alt="Graduation" class="w-20 h-20 rounded-full object-cover border-2 border-alum mb-2">
+                <span class="text-sm font-medium text-gray-600">Impact & Service</span>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="bg-white rounded-xl shadow p-5">
+              <h3 class="font-semibold text-alum mb-2">Our Mission</h3>
+              <p class="text-sm text-gray-500">To connect, inspire, and support alumni in their personal and professional growth, while giving back to our alma mater and society.</p>
+            </div>
+            <div class="bg-white rounded-xl shadow p-5">
+              <h3 class="font-semibold text-alum mb-2">Core Values</h3>
+              <ul class="list-disc ml-5 text-sm text-gray-500">
+                <li>Mentorship & Collaboration</li>
+                <li>Celebrating Achievements</li>
+                <li>Community Service</li>
+                <li>Inclusivity & Diversity</li>
+              </ul>
+            </div>
+            <div class="bg-white rounded-xl shadow p-5">
+              <h3 class="font-semibold text-alum mb-2">Aims & Objectives</h3>
+              <ul class="list-disc ml-5 text-sm text-gray-500">
+                <li>To foster unity and love among members.</li>
+                <li>To create social environment for interaction and integration.</li>
+                <li>To identify with the needs of members at all times; including Delta Careers College, Warri.</li>
+                <li>To seek the progress and development of our alma mater, Delta Careers College, Warri.</li>
+              </ul>
+            </div>
+          </div>
         </div>
-
-        <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-          <!-- image tiles (use real images or placeholders) -->
-          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery1">
-          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery2">
-          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1519985176271-adb1088fa94c?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery3">
-          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery4">
-          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1531973968078-9bb02785f13d?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery5">
-          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1519985176271-adb1088fa94c?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery6">
-        </div>
-        <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-          <!-- image tiles (use real images or placeholders) -->
-          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery1">
-          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery2">
-          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1519985176271-adb1088fa94c?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery3">
-          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery4">
-          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1531973968078-9bb02785f13d?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery5">
-          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1519985176271-adb1088fa94c?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery6">
-        </div>
-        <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-          <!-- image tiles (use real images or placeholders) -->
-          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery1">
-          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery2">
-          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1519985176271-adb1088fa94c?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery3">
-          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery4">
-          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1531973968078-9bb02785f13d?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery5">
-          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1519985176271-adb1088fa94c?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery6">
-        </div>
-        <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-          <!-- image tiles (use real images or placeholders) -->
-          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery1">
-          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery2">
-          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1519985176271-adb1088fa94c?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery3">
-          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery4">
-          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1531973968078-9bb02785f13d?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery5">
-          <img class="rounded-lg object-cover h-36 w-full" src="https://images.unsplash.com/photo-1519985176271-adb1088fa94c?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="gallery6">
+        <div class="flex flex-col gap-6">
+          <div class="p-6 bg-white rounded-2xl shadow flex flex-col items-center">
+            <img src="images/graduation.jpg" alt="History" class="w-32 h-32 rounded-full object-cover mb-4">
+            <h3 class="font-semibold text-lg">Our Story</h3>
+            <p class="text-sm text-gray-500 mt-2 text-center">Founded in 1992, our alumni community has grown to thousands of members worldwide, united by a commitment to excellence and connection.</p>
+          </div>
+          <div class="p-6 bg-white rounded-2xl shadow flex flex-col items-center">
+            <img src="images/grad.jpg" alt="Involvement" class="w-32 h-32 rounded-full object-cover mb-4">
+            <h3 class="font-semibold text-lg">Get Involved</h3>
+            <p class="text-sm text-gray-500 mt-2 text-center">Join us as a mentor, volunteer, or event organizer. Your participation strengthens our network and creates new opportunities for all.</p>
+          </div>
         </div>
       </div>
     </section>
+
+      <!-- LEADER SECTION -->
+      <section id="leader" class="max-w-7xl mx-auto px-6 py-16 border-t">
+        <h2 class="text-2xl font-bold mb-2">Alumni Leader</h2>
+        <div class="flex flex-col md:flex-row items-center gap-10">
+          <div class="flex-shrink-0">
+            <img src="images/Nicholas Ovuzorie.jpg" alt="President" class="w-40 h-40 rounded-full object-cover shadow-lg border-4 border-alum">
+          </div>
+          <div>
+            <p class="text-lg font-semibold text-alum">Mr. Nicholas Ovuzorie</p>
+            <p class="text-sm text-gray-600 mb-4">President, Alumni Association</p>
+            <p class="text-gray-500 max-w-md mb-6">Dedicated to fostering alumni connections and driving impactful initiatives for our community.</p>
+            <a href="leaders.html" class="inline-block bg-alum hover:bg-alum/80 text-white px-5 py-2 rounded-md font-medium shadow transition">View all leaders</a>
+          </div>
+        </div>
+      </section>
 
     <!-- FOOTER -->
     <footer class="bg-white border-t mt-12">

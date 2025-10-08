@@ -44,16 +44,18 @@
       <div class="flex items-center gap-4">
         <a href="index.html" class="flex items-center gap-3 text-alum font-semibold text-lg">
           <!-- Logo mark -->
-            <img class="w-9 h-12" src="images/logo.jpg" alt="Logo">
+            <img class="w-9 h-12" src="images/logo.png" alt="Logo">
             <span>DCCW ALUMNI 2000</span>
         </a>
       </div>
 
   <div class="hidden lg:flex items-center gap-8">
         <a class="nav-link text-sm font-medium hover:text-alum" href="index.html">Home</a>
+        <a class="nav-link text-sm font-medium hover:text-alum" href="about.html">About</a>
         <a class="nav-link text-sm font-medium hover:text-alum" href="leaders.html">Leaders</a>
         <a class="nav-link text-sm font-medium hover:text-alum" href="members.html">Members</a>
         <a class="nav-link text-sm font-medium hover:text-alum" href="gallery.html">Gallery</a>
+        <a class="nav-link text-sm font-medium hover:text-alum" href="constitution.html">Constitution</a>
       </div>
 
       <!-- Desktop CTA + Mobile Menu Button -->
@@ -79,7 +81,7 @@
   <aside class="absolute right-0 top-0 h-full max-h-screen overflow-y-auto w-3/5 bg-white shadow-2xl p-6 transform transition-transform translate-x-0 lg:hidden">
         <div class="flex items-center justify-between">
           <div class="flex items-center gap-3">
-            <img class="w-16 h-18" src="images/logo.jpg" alt="Logo">
+            <img class="w-16 h-18" src="images/logo.png" alt="Logo">
             <!-- <span class="text-lg font-semibold">Alumni</span> -->
           </div>
           <button id="mobileClose" class="p-2 rounded focus:outline-none">
@@ -89,14 +91,16 @@
 
         <nav class="mt-8 flex flex-col gap-4">
           <a href="index.html" class="text-base font-medium">Home</a>
+          <a href="about.html" class="text-base font-medium">About</a>
           <a href="leaders.html" class="text-base font-medium">Leaders</a>
           <a href="members.html" class="text-base font-medium">Members</a>
           <a href="gallery.html" class="text-base font-medium">Gallery</a>
+          <a href="constitution.html" class="text-base font-medium">Constitution</a>
           <a href="contact.html" class="text-white text-center font-medium bg-alum hover:bg-alum/80 transition duration-700 ease-in-out px-4 py-2 rounded-md shadow">Contact</a>
         </nav>
 
         <div class="mt-auto">
-          <p class="text-sm text-gray-500">Stay connected — join us at events and through our updates.</p>
+          <p class="text-sm text-gray-500 mt-4">Stay connected — join us at events and through our updates.</p>
         </div>
       </aside>
     </div>
@@ -155,7 +159,7 @@
         <!-- <p class="text-xs text-gray-500 text-center">Dedicated to fostering alumni connections and driving impactful initiatives for our community.</p> -->
       </div>
       <div class="bg-white rounded-2xl shadow p-6 flex flex-col items-center">
-        <img src="images/Ms Onyinyechi Ndubuisi .jpg" alt="Leader" class="w-40 h-40 rounded-full object-cover mb-4 border-4 border-alum">
+        <img src="images/Ms Onyinyechi Ndubuisi.png" alt="Leader" class="w-40 h-40 rounded-full object-cover mb-4 border-4 border-alum">
         <h2 class="font-semibold text-lg">Ms Onyinyechi Ndubuisi </h2>
         <p class="text-sm text-gray-600 mb-2">BOT Secretary</p>
         <!-- <p class="text-xs text-gray-500 text-center">Dedicated to fostering alumni connections and driving impactful initiatives for our community.</p> -->
@@ -205,8 +209,15 @@
     </button>
   </main>
 
+  <!-- FOOTER -->
   <footer class="bg-white border-t mt-12">
-    <div class="max-w-7xl mx-auto px-6 py-8 text-sm text-gray-600">© <span id="year"></span> Alumni Association. All rights reserved.</div>
+    <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="text-sm text-gray-600">© <span id="year"></span> DCCW ALUMNI 2000. All rights reserved.</div>
+      <div class="flex items-center gap-4">
+        <a href="#" class="text-sm text-gray-500 hover:text-alum">Privacy</a>
+        <a href="#" class="text-sm text-gray-500 hover:text-alum">Terms</a>
+      </div>
+    </div>
   </footer>
 
     <!-- Scripts -->
