@@ -32,7 +32,11 @@
 
   <style>
     /* small cosmetic helpers */
-    .glass { background: rgba(255,255,255,0.6); backdrop-filter: blur(6px); }
+    .glass {
+      background: rgba(255,255,255,0.6);
+      -webkit-backdrop-filter: blur(6px); /* Safari support */
+      backdrop-filter: blur(6px);
+    }
     .nav-link { transition: color .18s, transform .18s; }
     .nav-link:hover { transform: translateY(-2px); }
   </style>
@@ -85,6 +89,8 @@
           </div>
           <button id="mobileClose" class="p-2 rounded focus:outline-none">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+            <!-- Accessibility: Add title -->
+            <span class="sr-only">Close menu</span>
           </button>
         </div>
 
@@ -146,10 +152,8 @@ College Alumni, 2000 (DCC2000 ALUMNI).</p>
         <ul class="list-[lower-alpha] list-inside">
           <li>To foster unity and love among members.</li>
           <li>To create social environment for interaction and integration.</li>
-          <li>To identify with the needs of members at all times; including 
-Delta Careers College, Warri. </li>
-          <li>To seek the progress and development of our alma mater, Delta 
-Careers College, Warri. </li>
+          <li>To identify with the needs of members at all times; including Delta Careers College, Warri.</li>
+          <li>To seek the progress and development of our alma mater, Delta Careers College, Warri.</li>
         </ul>
         <p><strong>Membership</strong></p>
         <ul class="list-[lower-alpha] list-inside">
@@ -248,51 +252,40 @@ College, upon the screening of such person(s) by the Executives.</li>
         </ul>
         <p><strong>National Executive Council</strong></p>
         <ul class="list-[lower-alpha] list-inside">
-          <li>There shall be a National Executive Council elected by members 
-every two (2) years to see to the day to day administration of 
-the Association.</li>
-          <li>For a member to be qualified for an election into any of the 
-          offices, he/she shall be:
-          <ul class="list-[lower-roman] list-inside ml-4">
-            <li>Regular at meetings and activities of the Association</li>
-            <li>Up to date payment of dues and levies</li>
-          </ul>
-          </li>
-          <li>The offices are:
-            <ul class="list-[lower-roman] list-inside ml-4">
-              <li>The President.</li>
-              <li>The Vice President</li>
-              <li>The General Secretary</li>
-              <li>Assistant Secretary</li>
-              <li>Treasurer</li>
-              <li>Financial Secretary</li>
-              <li>Welfare Officer/Event Manager</li>
-              <li>Legal Adviser</li>
-              <li>Internal Auditor</li>
-              <li>Publicity Secretary</li>
-              <li>Chairman of Chapters</li>
-            </ul>
-          </li>
-
-          <p><strong>Powers And Duties Of The National Executive</strong></p>
-          <ul class="list-[lower-alpha] list-inside">
-              <li>To meet from time to time to manage the affairs of the 
-Association.</li>
-              <li>To summon meetings as at when due or required</li>
-              <li>To present to the general meeting, an annual report of the 
-Association and the statement of account.</li>
-              <li>To organize ceremonies to mark the founders day of the alma 
-mater on a bi-annual basis.</li>
-              <li>To appoint an adhoc committee as may deem necessary with 
-terms of reference.</li>
-              <li>To take such other steps as it may be considered necessary to 
-fulfill the objectives of the Association.</li>
-              <li>Membership shall comprise of all elected members of the 
-Association.</li>
-              <li>It shall formulate policies for the Association. All policy decisions 
-of the executive committee shall be ratified by (2/3) two third 
-majorities of the members.</li>
-          </ul>
+          <li>There shall be a National Executive Council elected by members every two (2) years to see to the day to day administration of the Association.</li>
+          <li>For a member to be qualified for an election into any of the offices, he/she shall be:</li>
+        </ul>
+        <ul class="list-[lower-roman] list-inside ml-4">
+          <li>Regular at meetings and activities of the Association</li>
+          <li>Up to date payment of dues and levies</li>
+        </ul>
+        <ul class="list-[lower-alpha] list-inside">
+          <li>The offices are:</li>
+        </ul>
+        <ul class="list-[lower-roman] list-inside ml-4">
+          <li>The President.</li>
+          <li>The Vice President</li>
+          <li>The General Secretary</li>
+          <li>Assistant Secretary</li>
+          <li>Treasurer</li>
+          <li>Financial Secretary</li>
+          <li>Welfare Officer/Event Manager</li>
+          <li>Legal Adviser</li>
+          <li>Internal Auditor</li>
+          <li>Publicity Secretary</li>
+          <li>Chairman of Chapters</li>
+        </ul>
+        <p><strong>Powers And Duties Of The National Executive</strong></p>
+        <ul class="list-[lower-alpha] list-inside">
+          <li>To meet from time to time to manage the affairs of the Association.</li>
+          <li>To summon meetings as at when due or required</li>
+          <li>To present to the general meeting, an annual report of the Association and the statement of account.</li>
+          <li>To organize ceremonies to mark the founders day of the alma mater on a bi-annual basis.</li>
+          <li>To appoint an adhoc committee as may deem necessary with terms of reference.</li>
+          <li>To take such other steps as it may be considered necessary to fulfill the objectives of the Association.</li>
+          <li>Membership shall comprise of all elected members of the Association.</li>
+          <li>It shall formulate policies for the Association. All policy decisions of the executive committee shall be ratified by (2/3) two third majorities of the members.</li>
+        </ul>
         </ul>
         <p><strong>Functions Of The Officers</strong></p>
         <p><strong>President</strong></p>
@@ -441,25 +434,23 @@ discussion. </li>
         inaugurated not earlier than two (2) weeks after the coming into effect 
         of this constitution. </p>
         <ul class="list-[lower-alpha] list-inside">
-          <li><strong>Membership/Tenure </strong>
-          <ul class="list-[lower-roman] list-inside ml-4">
-            <li>The Board of Trustees shall have a membership of nine 
-        members elected from among the senior members of the 
-        Association with due regard to the year of graduation from 
-        Delta Careers College, Warri and capability. </li>
-            <li>There shall be a chairman and secretary elected from 
-        among themselves.</li>
-            <li>The tenure of the Board of Trustees shall be three (3) 
-        years from the date of first election/inauguration.</li>
-          </ul></li>
-        <li><strong>Duties</strong>
-        <p>The Board of Trustees shall:</p>
-          <ul class="list-[lower-roman] list-inside ml-4">
-            <li>Act as arbiter in any dispute in the Association.</li>
-            <li>Be the custodian of the heritage of the Association and shall see to the promotion and adherence to its aims and objectives.</li>
-            <li>Ensure that the Association contributes to the growth and infrastructural development of our alma mater.</li>
-            <li>Undertake any other functions that may be referred to it by the Association from time to time.</li>
-          </ul></li>
+          <li>
+            <strong>Membership/Tenure</strong>
+            <ul class="list-[lower-roman] list-inside ml-4">
+              <li>The Board of Trustees shall have a membership of nine members elected from among the senior members of the Association with due regard to the year of graduation from Delta Careers College, Warri and capability.</li>
+              <li>There shall be a chairman and secretary elected from among themselves.</li>
+              <li>The tenure of the Board of Trustees shall be three (3) years from the date of first election/inauguration.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Duties</strong>
+            <ul class="list-[lower-roman] list-inside ml-4">
+              <li>Act as arbiter in any dispute in the Association.</li>
+              <li>Be the custodian of the heritage of the Association and shall see to the promotion and adherence to its aims and objectives.</li>
+              <li>Ensure that the Association contributes to the growth and infrastructural development of our alma mater.</li>
+              <li>Undertake any other functions that may be referred to it by the Association from time to time.</li>
+            </ul>
+          </li>
           </ul>
     </div>
     </div>
