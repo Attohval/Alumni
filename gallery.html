@@ -123,54 +123,77 @@
     </div>
   </header>
 
-  <!-- HERO -->
   <main class="pt-16">
+  <!-- GALLERY: Events as cards -->
+  <section id="gallery" class="bg-slate-50 py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <div>
+        <h2 class="text-2xl font-bold">Events Gallery</h2>
+        <!-- <a class="text-sm text-alum" href="gallery.html">View More</a> -->
+      </div>
 
-    <!-- GALLERY -->
-    <section id="gallery" class="bg-slate-50 py-16">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="flex items-center justify-between">
-          <h2 class="text-2xl font-bold">Gallery</h2>
-        </div>
+      <p class="text-sm text-gray-500 mt-2">Click an event to view photos from that event.</p>
 
-        <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-          <!-- image tiles (use real images or placeholders) -->
-          <img class="rounded-lg object-cover h-36 w-full" src="images/vtech.png" loading="lazy" decoding="async" alt="gallery1">
-          <img class="rounded-lg object-cover h-36 w-full" src="images/vtech.png" loading="lazy" decoding="async" alt="gallery2">
-          <img class="rounded-lg object-cover h-36 w-full" src="images/vtech.png" loading="lazy" decoding="async" alt="gallery3">
-          <img class="rounded-lg object-cover h-36 w-full" src="images/vtech.png" loading="lazy" decoding="async" alt="gallery4">
-          <img class="rounded-lg object-cover h-36 w-full" src="images/vtech.png" loading="lazy" decoding="async" alt="gallery5">
-          <img class="rounded-lg object-cover h-36 w-full" src="images/vtech.png" loading="lazy" decoding="async" alt="gallery6">
+      <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="eventsGrid">
+        <!-- Event card: 20th Anniversary Celebration -->
+        <article class="bg-white rounded-2xl shadow overflow-hidden cursor-pointer" data-event-id="20th Anniversary" role="button" tabindex="0" aria-haspopup="dialog">
+          <div class="w-full text-left">
+            <div class="h-44 overflow-hidden">
+              <img src="images/2020Annivasory/anniversary1.jpg" alt="20th Anniversary Celebration" class="w-full h-full object-cover">
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold">20th Anniversary</h3>
+              <p class="text-sm text-gray-500 mt-1">July, 2021 — Long service Awards, plaques and cash awards for our teachers still serving in the school</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Alumni AGM reunion and basketball court project commissioning -->
+        <article class="bg-white rounded-2xl shadow overflow-hidden cursor-pointer" data-event-id="reunion-2018" role="button" tabindex="0" aria-haspopup="dialog">
+          <div class="w-full text-left">
+            <div class="h-44 overflow-hidden">
+              <img src="images/2018Reunion/basketball_court_project.jpg" alt="Alumni AGM reunion and basketball court project commissioning" class="w-full h-full object-cover">
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold">Alumni AGM reunion and basketball court project commissioning</h3>
+              <p class="text-sm text-gray-500 mt-1">December, 2018 — Social & networking</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Event card: Reunion 2025 -->
+        <article class="bg-white rounded-2xl shadow overflow-hidden cursor-pointer" data-event-id="reunion-2025" role="button" tabindex="0" aria-haspopup="dialog">
+          <div class="w-full text-left">
+            <div class="h-44 overflow-hidden">
+              <img src="images/graduation.jpg" alt="Alumni Reunion 2025" class="w-full h-full object-cover">
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold">Alumni Reunion XXXX</h3>
+              <p class="text-sm text-gray-500 mt-1">XXXX edition of alumni AGM reunion</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- Modal: Event photos viewer -->
+    <div id="eventModal" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50" role="dialog" aria-modal="true" aria-labelledby="eventModalTitle">
+      <div class="bg-white max-w-4xl w-full mx-4 rounded-2xl overflow-hidden shadow-lg">
+        <div class="flex items-center justify-between p-4 border-b">
+          <h3 id="eventModalTitle" class="font-semibold">Event Photos</h3>
+          <div class="flex items-center gap-3">
+            <div id="eventCounter" class="text-sm text-gray-500">0 / 0</div>
+            <button id="closeEventModal" class="p-2 rounded-md text-gray-600 hover:bg-gray-100" title="Close" aria-label="Close event viewer">✕</button>
+          </div>
         </div>
-        <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-          <!-- image tiles (use real images or placeholders) -->
-          <img class="rounded-lg object-cover h-36 w-full" src="images/vtech.png" loading="lazy" decoding="async" alt="gallery1">
-          <img class="rounded-lg object-cover h-36 w-full" src="images/vtech.png" loading="lazy" decoding="async" alt="gallery2">
-          <img class="rounded-lg object-cover h-36 w-full" src="images/vtech.png" loading="lazy" decoding="async" alt="gallery3">
-          <img class="rounded-lg object-cover h-36 w-full" src="images/vtech.png" loading="lazy" decoding="async" alt="gallery4">
-          <img class="rounded-lg object-cover h-36 w-full" src="images/vtech.png" loading="lazy" decoding="async" alt="gallery5">
-          <img class="rounded-lg object-cover h-36 w-full" src="images/vtech.png" loading="lazy" decoding="async" alt="gallery6">
-        </div>
-        <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-          <!-- image tiles (use real images or placeholders) -->
-          <img class="rounded-lg object-cover h-36 w-full" src="images/vtech.png" loading="lazy" decoding="async" alt="gallery1">
-          <img class="rounded-lg object-cover h-36 w-full" src="images/vtech.png" loading="lazy" decoding="async" alt="gallery2">
-          <img class="rounded-lg object-cover h-36 w-full" src="images/vtech.png" loading="lazy" decoding="async" alt="gallery3">
-          <img class="rounded-lg object-cover h-36 w-full" src="images/vtech.png" loading="lazy" decoding="async" alt="gallery4">
-          <img class="rounded-lg object-cover h-36 w-full" src="images/vtech.png" loading="lazy" decoding="async" alt="gallery5">
-          <img class="rounded-lg object-cover h-36 w-full" src="images/vtech.png" loading="lazy" decoding="async" alt="gallery6">
-        </div>
-        <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-          <!-- image tiles (use real images or placeholders) -->
-          <img class="rounded-lg object-cover h-36 w-full" src="images/vtech.png" loading="lazy" decoding="async" alt="gallery1">
-          <img class="rounded-lg object-cover h-36 w-full" src="images/vtech.png" loading="lazy" decoding="async" alt="gallery2">
-          <img class="rounded-lg object-cover h-36 w-full" src="images/vtech.png" loading="lazy" decoding="async" alt="gallery3">
-          <img class="rounded-lg object-cover h-36 w-full" src="images/vtech.png" loading="lazy" decoding="async" alt="gallery4">
-          <img class="rounded-lg object-cover h-36 w-full" src="images/vtech.png" loading="lazy" decoding="async" alt="gallery5">
-          <img class="rounded-lg object-cover h-36 w-full" src="images/vtech.png" loading="lazy" decoding="async" alt="gallery6">
+        <div class="p-4 max-h-[65vh] overflow-auto">
+          <div id="eventCarousel" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <!-- images injected by JS -->
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
     <!-- FOOTER -->
     <footer class="bg-white border-t mt-12">
@@ -249,5 +272,7 @@
     });
     
   </script>
+  <script src="galleryModal.js"></script>
+  <script src="reloadPage.js"></script>
 </body>
 </html>
