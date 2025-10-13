@@ -312,17 +312,42 @@
     </section>
 
     <!-- GALLERY: Events as cards -->
-
     <section id="gallery" class="bg-slate-50 py-16">
       <div class="max-w-7xl mx-auto px-6">
         <div class="flex items-center justify-between">
-          <h2 class="text-2xl font-bold">Gallery</h2>
+          <h2 class="text-2xl font-bold">Events Gallery</h2>
           <a class="text-sm text-alum" href="gallery.html">View More</a>
         </div>
 
-        <p class="text-sm text-gray-500 mt-2">Click an event to view photos grouped by that event.</p>
+        <p class="text-sm text-gray-500 mt-2">Click an event to view photos from that event.</p>
 
         <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="eventsGrid">
+          <!-- Event card: 20th Anniversary Celebration -->
+          <article class="bg-white rounded-2xl shadow overflow-hidden cursor-pointer" data-event-id="20th Anniversary" role="button" tabindex="0" aria-haspopup="dialog">
+            <div class="w-full text-left">
+              <div class="h-44 overflow-hidden">
+                <img src="images/2020Annivasory/anniversary1.jpg" alt="20th Anniversary Celebration" class="w-full h-full object-cover">
+              </div>
+              <div class="p-4">
+                <h3 class="font-semibold">20th Anniversary</h3>
+                <p class="text-sm text-gray-500 mt-1">July, 2021 — Long service Awards, plaques and cash awards for our teachers still serving in the school</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Alumni AGM reunion and basketball court project commissioning -->
+          <article class="bg-white rounded-2xl shadow overflow-hidden cursor-pointer" data-event-id="reunion-2018" role="button" tabindex="0" aria-haspopup="dialog">
+            <div class="w-full text-left">
+              <div class="h-44 overflow-hidden">
+                <img src="images/2018Reunion/basketball_court_project.jpg" alt="Alumni AGM reunion and basketball court project commissioning" class="w-full h-full object-cover">
+              </div>
+              <div class="p-4">
+                <h3 class="font-semibold">Alumni AGM reunion and basketball court project commissioning</h3>
+                <p class="text-sm text-gray-500 mt-1">December, 2018 — Social & networking</p>
+              </div>
+            </div>
+          </article>
+
           <!-- Event card: Reunion 2025 -->
           <article class="bg-white rounded-2xl shadow overflow-hidden cursor-pointer" data-event-id="reunion-2025" role="button" tabindex="0" aria-haspopup="dialog">
             <div class="w-full text-left">
@@ -330,34 +355,8 @@
                 <img src="images/graduation.jpg" alt="Alumni Reunion 2025" class="w-full h-full object-cover">
               </div>
               <div class="p-4">
-                <h3 class="font-semibold">Alumni Reunion 2025</h3>
-                <p class="text-sm text-gray-500 mt-1">Oct 12, 2025 — Highlights and celebration</p>
-              </div>
-            </div>
-          </article>
-
-          <!-- Event card: Careers Night -->
-          <article class="bg-white rounded-2xl shadow overflow-hidden cursor-pointer" data-event-id="careers-2025" role="button" tabindex="0" aria-haspopup="dialog">
-            <div class="w-full text-left">
-              <div class="h-44 overflow-hidden">
-                <img src="images/vtech.png" alt="Careers Night 2025" class="w-full h-full object-cover">
-              </div>
-              <div class="p-4">
-                <h3 class="font-semibold">Careers & Mentorship Night</h3>
-                <p class="text-sm text-gray-500 mt-1">Nov 7, 2025 — Panels & mentoring</p>
-              </div>
-            </div>
-          </article>
-
-          <!-- Event card: Holiday Mixer -->
-          <article class="bg-white rounded-2xl shadow overflow-hidden cursor-pointer" data-event-id="mixer-2025" role="button" tabindex="0" aria-haspopup="dialog">
-            <div class="w-full text-left">
-              <div class="h-44 overflow-hidden">
-                <img src="images/vtech.png" alt="Holiday Mixer 2025" class="w-full h-full object-cover">
-              </div>
-              <div class="p-4">
-                <h3 class="font-semibold">Holiday Networking Mixer</h3>
-                <p class="text-sm text-gray-500 mt-1">Dec 3, 2025 — Social & networking</p>
+                <h3 class="font-semibold">Alumni Reunion XXXX</h3>
+                <p class="text-sm text-gray-500 mt-1">XXXX edition of alumni AGM reunion</p>
               </div>
             </div>
           </article>
@@ -366,20 +365,19 @@
 
       <!-- Modal: Event photos viewer -->
       <div id="eventModal" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50" role="dialog" aria-modal="true" aria-labelledby="eventModalTitle">
-    <div class="bg-white max-w-4xl w-full mx-4 rounded-2xl overflow-hidden shadow-lg">
+        <div class="bg-white max-w-4xl w-full mx-4 rounded-2xl overflow-hidden shadow-lg">
           <div class="flex items-center justify-between p-4 border-b">
             <h3 id="eventModalTitle" class="font-semibold">Event Photos</h3>
-            <button id="closeEventModal" class="p-2 rounded-md text-gray-600 hover:bg-gray-100" title="Close" aria-label="Close event viewer">✕</button>
+            <div class="flex items-center gap-3">
+              <div id="eventCounter" class="text-sm text-gray-500">0 / 0</div>
+              <button id="closeEventModal" class="p-2 rounded-md text-gray-600 hover:bg-gray-100" title="Close" aria-label="Close event viewer">✕</button>
+            </div>
           </div>
           <div class="p-4 max-h-[65vh] overflow-auto">
             <div id="eventCarousel" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <!-- images injected by JS -->
             </div>
           </div>
-          <!-- <div class="p-4 border-t text-right">
-            <button id="prevEvent" class="px-3 py-2 mr-2 bg-alum text-white rounded-md">Previous</button>
-            <button id="nextEvent" class="px-3 py-2 bg-alum text-white rounded-md">Next</button>
-          </div> -->
         </div>
       </div>
     </section>
@@ -540,41 +538,71 @@
 
     /* Event gallery modal (group images by event) */
     const events = {
+      '20th Anniversary': {
+        title: '20th Anniversary',
+        images: [
+          'images/2020Annivasory/anniversary1.jpg',
+          'images/2020Annivasory/anniversary2.jpg',
+          'images/2020Annivasory/anniversary3.jpg',
+          'images/2020Annivasory/anniversary4.jpg',
+          'images/2020Annivasory/anniversary5.jpg',
+          'images/2020Annivasory/anniversary6.jpg',
+          'images/2020Annivasory/anniversary7.jpg',
+          'images/2020Annivasory/anniversary8.jpg',
+          'images/2020Annivasory/anniversary9.jpg',
+          'images/2020Annivasory/anniversary10.jpg',
+          'images/2020Annivasory/anniversary11.jpg',
+          'images/2020Annivasory/anniversary12.jpg',
+          'images/2020Annivasory/anniversary13.jpg',
+          'images/2020Annivasory/anniversary14.jpg',
+          'images/2020Annivasory/anniversary15.jpg',
+          'images/2020Annivasory/anniversary16.jpg',
+          'images/2020Annivasory/anniversary17.jpg',
+          'images/2020Annivasory/anniversary18.jpg',
+          'images/2020Annivasory/anniversary19.jpg',
+          'images/2020Annivasory/anniversary20.jpg',
+          'images/2020Annivasory/anniversary21.jpg',
+          'images/2020Annivasory/anniversary22.jpg',
+          'images/2020Annivasory/anniversary23.jpg',
+          'images/2020Annivasory/anniversary24.jpg'
+        ]
+      },
+      'reunion-2018': {
+        title: 'Alumni AGM reunion and basketball court project commissioning',
+        images: [
+          'images/2018Reunion/basketball_court_project1.jpg',
+          'images/2018Reunion/basketball_court_project2.jpg',
+          'images/2018Reunion/basketball_court_project3.jpg',
+          'images/2018Reunion/basketball_court_project4.jpg',
+          'images/2018Reunion/basketball_court_project8.jpg',
+          'images/2018Reunion/basketball_court_project6.jpg',
+          'images/2018Reunion/basketball_court_project7.jpg',
+          'images/2018Reunion/basketball_court_project5.jpg',
+        ]
+      },
       'reunion-2025': {
         title: 'Alumni Reunion 2025',
         images: [
-          'images/graduation.jpg',
-          'images/vtech.png',
-          'images/graduation.jpg',
-          'images/vtech.png',
-          'images/grad.jpg'
+          'images/',
+          'images/',
+          'images/',
+          'images/',
+          'images/',
+          'images/',
+          'images/',
+          'images/',
+          'images/',
+          'images/'
         ]
       },
-      'careers-2025': {
-        title: 'Careers & Mentorship Night',
-        images: [
-          'images/vtech.png',
-          'images/grad.jpg',
-          'images/vtech.png',
-          'images/grad.jpg'
-        ]
-      },
-      'mixer-2025': {
-        title: 'Holiday Networking Mixer',
-        images: [
-          'images/vtech.png',
-          'images/grad.jpg',
-          'images/vtech.png',
-          'images/grad.jpg',
-        ]
-      }
     };
 
-    const eventModal = document.getElementById('eventModal');
-    const eventCarousel = document.getElementById('eventCarousel');
-    const closeEventModal = document.getElementById('closeEventModal');
-    const prevEvent = document.getElementById('prevEvent');
-    const nextEvent = document.getElementById('nextEvent');
+  const eventModal = document.getElementById('eventModal');
+  const eventCarousel = document.getElementById('eventCarousel');
+  const closeEventModal = document.getElementById('closeEventModal');
+  const prevEvent = document.getElementById('prevEvent');
+  const nextEvent = document.getElementById('nextEvent');
+  const eventCounter = document.getElementById('eventCounter');
     let currentEventId = null;
     let currentIndex = 0;
 
@@ -609,18 +637,30 @@
         img.className = 'w-full h-56 object-cover rounded';
         img.loading = 'lazy';
         img.decoding = 'async';
-        if (i !== currentIndex) img.style.opacity = '0.6';
+        // click to activate image (keeps scroll/counter behavior)
+        img.addEventListener('click', () => showIndex(i));
         div.appendChild(img);
         eventCarousel.appendChild(div);
       });
+      updateCounter();
     }
 
     function showIndex(idx) {
       const images = events[currentEventId].images;
       currentIndex = (idx + images.length) % images.length;
       Array.from(eventCarousel.children).forEach((child, i) => {
-        child.firstChild.style.opacity = i === currentIndex ? '1' : '0.6';
+        if (i === currentIndex) {
+          // scroll active image into view within the modal
+          child.scrollIntoView({behavior: 'smooth', block: 'center'});
+        }
       });
+      updateCounter();
+    }
+
+    function updateCounter() {
+      const images = events[currentEventId].images;
+      if (!images) return;
+      eventCounter.textContent = `${currentIndex + 1} / ${images.length}`;
     }
 
     // Use event delegation so taps on mobile (and keyboard) reliably open the modal
@@ -643,8 +683,6 @@
 
     closeEventModal.addEventListener('click', closeEvent);
     eventModal.addEventListener('click', (e)=>{ if (e.target === eventModal) closeEvent(); });
-    //prevEvent.addEventListener('click', ()=> showIndex(currentIndex - 1));
-    //nextEvent.addEventListener('click', ()=> showIndex(currentIndex + 1));
 
     // keyboard navigation
     document.addEventListener('keydown', (e)=>{
