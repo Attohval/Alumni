@@ -311,22 +311,75 @@
       </div>
     </section>
 
-    <!-- GALLERY -->
+    <!-- GALLERY: Events as cards -->
+
     <section id="gallery" class="bg-slate-50 py-16">
       <div class="max-w-7xl mx-auto px-6">
         <div class="flex items-center justify-between">
           <h2 class="text-2xl font-bold">Gallery</h2>
-          <a class="text-sm text-alum" href="gallery.html">View all photos</a>
+          <a class="text-sm text-alum" href="gallery.html">View More</a>
         </div>
 
-        <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-          <!-- image tiles (use real images or placeholders) -->
-          <img class="rounded-lg object-cover h-36 w-full" src="images/vtech.png" alt="gallery1">
-          <img class="rounded-lg object-cover h-36 w-full" src="images/vtech.png" alt="gallery2">
-          <img class="rounded-lg object-cover h-36 w-full" src="images/vtech.png" alt="gallery3">
-          <img class="rounded-lg object-cover h-36 w-full" src="images/vtech.png" alt="gallery4">
-          <img class="rounded-lg object-cover h-36 w-full" src="images/vtech.png" alt="gallery5">
-          <img class="rounded-lg object-cover h-36 w-full" src="images/vtech.png" alt="gallery6">
+        <p class="text-sm text-gray-500 mt-2">Click an event to view photos grouped by that event.</p>
+
+        <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="eventsGrid">
+          <!-- Event card: Reunion 2025 -->
+          <article class="bg-white rounded-2xl shadow overflow-hidden cursor-pointer" data-event-id="reunion-2025" role="button" tabindex="0" aria-haspopup="dialog">
+            <div class="w-full text-left">
+              <div class="h-44 overflow-hidden">
+                <img src="images/graduation.jpg" alt="Alumni Reunion 2025" class="w-full h-full object-cover">
+              </div>
+              <div class="p-4">
+                <h3 class="font-semibold">Alumni Reunion 2025</h3>
+                <p class="text-sm text-gray-500 mt-1">Oct 12, 2025 — Highlights and celebration</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Event card: Careers Night -->
+          <article class="bg-white rounded-2xl shadow overflow-hidden cursor-pointer" data-event-id="careers-2025" role="button" tabindex="0" aria-haspopup="dialog">
+            <div class="w-full text-left">
+              <div class="h-44 overflow-hidden">
+                <img src="images/vtech.png" alt="Careers Night 2025" class="w-full h-full object-cover">
+              </div>
+              <div class="p-4">
+                <h3 class="font-semibold">Careers & Mentorship Night</h3>
+                <p class="text-sm text-gray-500 mt-1">Nov 7, 2025 — Panels & mentoring</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Event card: Holiday Mixer -->
+          <article class="bg-white rounded-2xl shadow overflow-hidden cursor-pointer" data-event-id="mixer-2025" role="button" tabindex="0" aria-haspopup="dialog">
+            <div class="w-full text-left">
+              <div class="h-44 overflow-hidden">
+                <img src="images/vtech.png" alt="Holiday Mixer 2025" class="w-full h-full object-cover">
+              </div>
+              <div class="p-4">
+                <h3 class="font-semibold">Holiday Networking Mixer</h3>
+                <p class="text-sm text-gray-500 mt-1">Dec 3, 2025 — Social & networking</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Modal: Event photos viewer -->
+      <div id="eventModal" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50" role="dialog" aria-modal="true" aria-labelledby="eventModalTitle">
+    <div class="bg-white max-w-4xl w-full mx-4 rounded-2xl overflow-hidden shadow-lg">
+          <div class="flex items-center justify-between p-4 border-b">
+            <h3 id="eventModalTitle" class="font-semibold">Event Photos</h3>
+            <button id="closeEventModal" class="p-2 rounded-md text-gray-600 hover:bg-gray-100" title="Close" aria-label="Close event viewer">✕</button>
+          </div>
+          <div class="p-4 max-h-[65vh] overflow-auto">
+            <div id="eventCarousel" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <!-- images injected by JS -->
+            </div>
+          </div>
+          <!-- <div class="p-4 border-t text-right">
+            <button id="prevEvent" class="px-3 py-2 mr-2 bg-alum text-white rounded-md">Previous</button>
+            <button id="nextEvent" class="px-3 py-2 bg-alum text-white rounded-md">Next</button>
+          </div> -->
         </div>
       </div>
     </section>
@@ -343,7 +396,7 @@
               <svg class="w-6 h-6 text-alum mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
               <div>
                 <div class="font-medium"><strong>Email:</strong></div>
-                <div class="text-sm text-gray-500">alumni@gmail.com</div>
+                <div class="text-sm text-gray-500">dccalumni2000@gmail.com</div>
               </div>
             </div>
 
@@ -351,7 +404,7 @@
               <svg class="w-6 h-6 text-alum mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m0 4v10"/></svg>
               <div>
                 <div class="font-medium"><strong>School:</strong></div>
-                <div class="text-sm text-gray-500">123 Somewhere Around The World</div>
+                <div class="text-sm text-gray-500">Plot 160 Airport Road, Ugboroke, Effurun, Uvwie Local Government Area, Delta State - Nigeria</div>
               </div>
             </div>
 
@@ -375,7 +428,10 @@
           <!-- Map placeholder -->
           <div class="mt-6">
             <div class="w-full h-48 bg-gray-100 rounded-lg flex items-center justify-center text-sm text-gray-400">
-              <img class="w-full h-full object-cover rounded-lg" src="images/map.jpeg" loading="lazy" decoding="async" alt="location-map">
+              <a target="_blank" rel="noopener" href="https://www.google.com/maps/dir//Warri,+332104,+Delta/@5.5402083,5.665807,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x1041ad5dccf39863:0x75d0525fea754958!2m2!1d5.748209!2d5.540214?hl=en-GB&entry=ttu&g_ep=EgoyMDI1MTAwOC4wIKXMDSoASAFQAw%3D%3D">
+                <span class="underline">View on Google Maps</span>
+              </a>
+              <img class="w-full h-full object-cover rounded-lg" src="images/map.png" loading="lazy" decoding="async" alt="location-map">
             </div>
           </div>
         </div>
@@ -480,6 +536,122 @@
           window.scrollTo({top: y, behavior: 'smooth'});
         }
       });
+    });
+
+    /* Event gallery modal (group images by event) */
+    const events = {
+      'reunion-2025': {
+        title: 'Alumni Reunion 2025',
+        images: [
+          'images/graduation.jpg',
+          'images/vtech.png',
+          'images/graduation.jpg',
+          'images/vtech.png',
+          'images/grad.jpg'
+        ]
+      },
+      'careers-2025': {
+        title: 'Careers & Mentorship Night',
+        images: [
+          'images/vtech.png',
+          'images/grad.jpg',
+          'images/vtech.png',
+          'images/grad.jpg'
+        ]
+      },
+      'mixer-2025': {
+        title: 'Holiday Networking Mixer',
+        images: [
+          'images/vtech.png',
+          'images/grad.jpg',
+          'images/vtech.png',
+          'images/grad.jpg',
+        ]
+      }
+    };
+
+    const eventModal = document.getElementById('eventModal');
+    const eventCarousel = document.getElementById('eventCarousel');
+    const closeEventModal = document.getElementById('closeEventModal');
+    const prevEvent = document.getElementById('prevEvent');
+    const nextEvent = document.getElementById('nextEvent');
+    let currentEventId = null;
+    let currentIndex = 0;
+
+    function openEvent(eventId) {
+      const ev = events[eventId];
+      if (!ev) return;
+      currentEventId = eventId;
+      currentIndex = 0;
+      document.getElementById('eventModalTitle').textContent = ev.title;
+      renderEventImages(ev.images);
+      eventModal.classList.remove('hidden');
+      eventModal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeEvent() {
+      eventModal.classList.add('hidden');
+      eventModal.classList.remove('flex');
+      eventCarousel.innerHTML = '';
+      document.body.style.overflow = '';
+      currentEventId = null;
+    }
+
+    function renderEventImages(images) {
+      eventCarousel.innerHTML = '';
+      images.forEach((src, i) => {
+        const div = document.createElement('div');
+        div.className = 'rounded overflow-hidden';
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = '';
+        img.className = 'w-full h-56 object-cover rounded';
+        img.loading = 'lazy';
+        img.decoding = 'async';
+        if (i !== currentIndex) img.style.opacity = '0.6';
+        div.appendChild(img);
+        eventCarousel.appendChild(div);
+      });
+    }
+
+    function showIndex(idx) {
+      const images = events[currentEventId].images;
+      currentIndex = (idx + images.length) % images.length;
+      Array.from(eventCarousel.children).forEach((child, i) => {
+        child.firstChild.style.opacity = i === currentIndex ? '1' : '0.6';
+      });
+    }
+
+    // Use event delegation so taps on mobile (and keyboard) reliably open the modal
+    const eventsGrid = document.getElementById('eventsGrid');
+    eventsGrid.addEventListener('click', (e) => {
+      const card = e.target.closest('[data-event-id]');
+      if (!card) return;
+      const id = card.getAttribute('data-event-id');
+      openEvent(id);
+    });
+    // keyboard support (Enter/Space)
+    eventsGrid.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        const card = e.target.closest('[data-event-id]');
+        if (!card) return;
+        e.preventDefault();
+        openEvent(card.getAttribute('data-event-id'));
+      }
+    });
+
+    closeEventModal.addEventListener('click', closeEvent);
+    eventModal.addEventListener('click', (e)=>{ if (e.target === eventModal) closeEvent(); });
+    //prevEvent.addEventListener('click', ()=> showIndex(currentIndex - 1));
+    //nextEvent.addEventListener('click', ()=> showIndex(currentIndex + 1));
+
+    // keyboard navigation
+    document.addEventListener('keydown', (e)=>{
+      if (!currentEventId) return;
+      if (e.key === 'Escape') closeEvent();
+      if (e.key === 'ArrowLeft') showIndex(currentIndex - 1);
+      if (e.key === 'ArrowRight') showIndex(currentIndex + 1);
     });
   </script>
 </body>
