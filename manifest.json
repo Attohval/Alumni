@@ -1,10 +1,11 @@
 {
   "name": "DCCW ALUMNI 2000",
   "short_name": "DCCW Alumni",
-  "start_url": "/index.html",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#020353",
+  "description": "Official alumni website for graduate members to stay connected and share updates.",
   "icons": [
     {
       "src": "images/logo.png",
