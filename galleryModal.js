@@ -42,8 +42,8 @@ const events = {
       'images/2018Reunion/basketball_court_project5.jpg',
     ]
   },
-  'reunion-2025': {
-    title: 'Alumni Reunion 2025',
+  'uzezi-mother-burial': {
+    title: 'Uzezi Mother\'s Burial',
     images: [
       'images/UzeziMotherBurial/burial-img-1.jpg',
       'images/UzeziMotherBurial/burial-img-2.jpg',
