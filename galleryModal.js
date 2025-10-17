@@ -45,16 +45,22 @@ const events = {
   'reunion-2025': {
     title: 'Alumni Reunion 2025',
     images: [
-      'images/',
-      'images/',
-      'images/',
-      'images/',
-      'images/',
-      'images/',
-      'images/',
-      'images/',
-      'images/',
-      'images/'
+      'images/UzeziMotherBurial/burial-img-1.jpg',
+      'images/UzeziMotherBurial/burial-img-2.jpg',
+      'images/UzeziMotherBurial/burial-img-3.jpg',
+      'images/UzeziMotherBurial/burial-img-4.jpg',
+      'images/UzeziMotherBurial/burial-img-5.jpg',
+      'images/UzeziMotherBurial/burial-img-6.jpg',
+      'images/UzeziMotherBurial/burial-img-7.jpg',
+      'images/UzeziMotherBurial/burial-img-8.jpg',
+      'images/UzeziMotherBurial/burial-img-9.jpg',
+      'images/UzeziMotherBurial/burial-img-10.jpg',
+      'images/UzeziMotherBurial/burial-img-11.jpg',
+      'images/UzeziMotherBurial/burial-img-12.jpg',
+      'images/UzeziMotherBurial/burial-img-13.jpg',
+      'images/UzeziMotherBurial/burial-img-14.jpg',
+      'images/UzeziMotherBurial/burial-img-15.jpg',
+      'images/UzeziMotherBurial/burial-img-16.jpg'
     ]
   },
 };
@@ -97,8 +103,9 @@ function renderEventImages(images) {
     img.src = src;
     img.alt = '';
     img.className = 'w-full h-56 object-cover rounded';
-    img.loading = 'lazy';
+    // img.loading = 'lazy';
     img.decoding = 'async';
+
     // click to activate image (keeps scroll/counter behavior)
     img.addEventListener('click', () => showIndex(i));
     div.appendChild(img);

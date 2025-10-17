@@ -49,14 +49,15 @@
   <style>
     /* small cosmetic helpers */
     .glass {
-  background: rgba(255,255,255,0.6);
-  -webkit-backdrop-filter: blur(6px); /* Safari support */
-  backdrop-filter: blur(6px);
+      background: rgba(255,255,255,0.6);
+      -webkit-backdrop-filter: blur(6px); /* Safari support */
+      backdrop-filter: blur(6px);
     }
-    .nav-link { transition: color .18s, transform .18s; }
-    .nav-link:hover { transform: translateY(-2px); }
+      .nav-link { transition: color .18s, transform .18s; }
+      .nav-link:hover { transform: translateY(-2px); }
   </style>
 </head>
+
 <body class="antialiased text-gray-800 bg-gray-50 font-sans">
   <!-- NAVBAR -->
   <header class="fixed bg-white inset-x-0 top-0 z-40">
@@ -69,7 +70,7 @@
         </a>
       </div>
 
-  <div class="hidden lg:flex items-center gap-8">
+      <div class="hidden lg:flex items-center gap-8">
         <a class="nav-link text-sm font-medium hover:text-alum" href="about.html">About</a>
         <a class="nav-link text-sm font-medium hover:text-alum" href="#events">Events</a>
         <a class="nav-link text-sm font-medium hover:text-alum" href="#news">News</a>
@@ -80,9 +81,9 @@
 
       <!-- Desktop CTA + Mobile Menu Button -->
       <div class="flex items-center gap-3">
-  <a href="constitution.html" class="hidden lg:inline-block bg-alum hover:bg-alum/80 transition duration-700 ease-in-out text-white px-4 py-2 rounded-md text-sm font-medium shadow">Constitution</a>
+        <a href="constitution.html" class="hidden lg:inline-block bg-alum hover:bg-alum/80 transition duration-700 ease-in-out text-white px-4 py-2 rounded-md text-sm font-medium shadow">Constitution</a>
 
-  <button id="menuBtn" class="lg:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-alum/40" aria-label="Open menu">
+        <button id="menuBtn" class="lg:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-alum/40" aria-label="Open menu">
           <!-- Hamburger -->
           <svg id="hamburger" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -259,9 +260,9 @@
         <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <!-- Event card -->
           <article class="p-6 bg-slate-50 rounded-2xl shadow hover:shadow-lg transition">
-            <time class="text-sm text-gray-500">Oct 12, 2025</time>
-            <h3 class="mt-2 font-semibold">Alumni Reunion 2025</h3>
-            <p class="mt-2 text-sm text-gray-600">A day of celebration, networking, and keynote talks by notable alumni.</p>
+            <time class="text-sm text-gray-500">January, 2026</time>
+            <h3 class="mt-2 font-semibold">Alumni Reunion 2026</h3>
+            <p class="mt-2 text-sm text-gray-600">A week of fun filled and interactive events.</p>
             <div class="mt-4 flex items-center gap-3">
               <span class="text-xs px-2 py-1 rounded-full bg-alum/10 text-alum">Reunion</span>
               <span class="text-xs px-2 py-1 rounded-full bg-green-100 text-green-700">Tickets: Free</span>
@@ -269,18 +270,18 @@
           </article>
 
           <article class="p-6 bg-slate-50 rounded-2xl shadow hover:shadow-lg transition">
-            <time class="text-sm text-gray-500">Nov 7, 2025</time>
-            <h3 class="mt-2 font-semibold">Careers & Mentorship Night</h3>
-            <p class="mt-2 text-sm text-gray-600">Panels and one-on-one mentorship for early-career alumni and students.</p>
+            <time class="text-sm text-gray-500">December, 2025</time>
+            <h3 class="mt-2 font-semibold">Alumni General Elections</h3>
+            <p class="mt-2 text-sm text-gray-600">Election to birth next set of leaders</p>
             <div class="mt-4 flex items-center gap-3">
-              <span class="text-xs px-2 py-1 rounded-full bg-alum/10 text-alum">Career</span>
+              <span class="text-xs px-2 py-1 rounded-full bg-alum/10 text-alum">Voting</span>
             </div>
           </article>
 
           <article class="p-6 bg-slate-50 rounded-2xl shadow hover:shadow-lg transition">
-            <time class="text-sm text-gray-500">Dec 3, 2025</time>
-            <h3 class="mt-2 font-semibold">Holiday Networking Mixer</h3>
-            <p class="mt-2 text-sm text-gray-600">An informal evening for alumni to reconnect before the holidays.</p>
+            <time class="text-sm text-gray-500">September 27th, 2025</time>
+            <h3 class="mt-2 font-semibold">Uzezi mother's Burial</h3>
+            <p class="mt-2 text-sm text-gray-600">Burial ceremony</p>
             <div class="mt-4 flex items-center gap-3">
               <span class="text-xs px-2 py-1 rounded-full bg-alum/10 text-alum">Social</span>
             </div>
@@ -290,7 +291,7 @@
     </section>
 
     <!-- NEWS -->
-    <section id="news" class="max-w-7xl mx-auto px-6 py-16">
+    <!-- <section id="news" class="max-w-7xl mx-auto px-6 py-16">
       <div>
         <h2 class="text-2xl font-bold">Latest News</h2>
         <p class="text-sm text-gray-500 mt-2">Announcements, spotlights, and features about our alumni community.</p>
@@ -309,7 +310,7 @@
           </article>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- GALLERY: Events as cards -->
     <section id="gallery" class="bg-slate-50 py-16">
@@ -352,11 +353,11 @@
           <article class="bg-white rounded-2xl shadow overflow-hidden cursor-pointer" data-event-id="reunion-2025" role="button" tabindex="0" aria-haspopup="dialog">
             <div class="w-full text-left">
               <div class="h-44 overflow-hidden">
-                <img src="images/graduation.jpg" alt="Alumni Reunion 2025" class="w-full h-full object-cover">
+                <img src="images/UzeziMotherBurial/burial-flyer.jpg" alt="burial-card" class="w-full h-full object-cover">
               </div>
               <div class="p-4">
-                <h3 class="font-semibold">Alumni Reunion XXXX</h3>
-                <p class="text-sm text-gray-500 mt-1">XXXX edition of alumni AGM reunion</p>
+                <h3 class="font-semibold">Uzezi mother's Burial</h3>
+                <p class="text-sm text-gray-500 mt-1">September, 27th 2025</p>
               </div>
             </div>
           </article>
